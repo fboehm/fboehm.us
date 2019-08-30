@@ -1,0 +1,3 @@
+[submodule "themes/noamross"]
+	path = themes/noamross
+	url = https://github.com/fboehm/noamross.git

@@ -12,7 +12,7 @@ library(snakecase)
 
 
 ## ----------------------------------------------------------
-my_orcid <- "0000-0002-2136-0000"
+my_orcid <- "0000-0002-1644-5931"
 cites <- orcid_citations(my_orcid, cr_format = "citeproc-json")
 jobs <- orcid_employments(my_orcid)
 edu <- orcid_educations(my_orcid)
@@ -35,7 +35,7 @@ publist <-
         type = "paper",
         title = x$title,
         authors = as.list(paste(x$author$given, x$author$family)),
-        date = as.character(as.Date(paste(x$created$`date-parts`, collapse="-"))),
+        date = as.character(lubridate::as_date(paste(x$created$`date-parts`, collapse="-"))),
         exurl = paste0("https://dx.doi.org/", x$DOI))
   })
 names(publist) <- map_chr(publist, "name")
@@ -89,3 +89,4 @@ edulist <- purrr::map(edu[[my_orcid]][["affiliation-group"]][["summaries"]], fun
 })
 names(edulist) <- map_chr(edulist, "name")
 write_yaml(edulist, here("data", "education.yaml"), handlers = list(Date = function(x) as.character (x)))
+
