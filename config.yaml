@@ -7,8 +7,7 @@ pygmentsStyle: "lovelace"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 canonifyURLs: true
 permalinks:
-  musings: "/:year/:month/:day/:slug/"
-  archives: "/archives/:filename/"
+  blog: "/blog/:slug/"
 
 author:
   name: "Noam Ross"
