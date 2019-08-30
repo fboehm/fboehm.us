@@ -49,7 +49,6 @@ Laurie_2010:
   - Kenneth M. Rice
   - Xiuwen Zheng
   - Bruce S. Weir
-  - NA NA
   date: '2010-08-17'
   exurl: https://dx.doi.org/10.1002/gepi.20516
 Fawzi_2010:
@@ -118,20 +117,8 @@ Tauchman_2015:
   - Jennifer G. DeLuca
   date: '2015-12-01'
   exurl: https://dx.doi.org/10.1038/ncomms10036
-Boehm_2019:
-  name: Boehm_2019
-  doi: 10.1101/550939
-  type: paper
-  title: Testing pleiotropy vs. separate QTL in multiparental populations
-  authors:
-  - Frederick J. Boehm
-  - Elissa J. Chesler
-  - Brian S. Yandell
-  - Karl W. Broman
-  date: '2019-02-16'
-  exurl: https://dx.doi.org/10.1101/550939
-Boehm_2019:
-  name: Boehm_2019
+Boehm_2019b:
+  name: Boehm_2019b
   doi: 10.21105/joss.01435
   type: paper
   title: 'qtl2pleio: Testing pleiotropy vs. separate QTL in multiparental populations'
@@ -141,7 +128,7 @@ Boehm_2019:
   - Karl Broman
   date: '2019-06-30'
   exurl: https://dx.doi.org/10.21105/joss.01435
-Boehm_2019:
+Boehm_2019a:
   name: Boehm_2019
   doi: 10.1534/g3.119.400098
   type: paper
@@ -180,12 +167,20 @@ Kemis_2019:
   - Federico E. Rey
   date: '2019-08-29'
   exurl: https://dx.doi.org/10.1371/journal.pgen.1008073
-Hartman_2014:
-  preprint: yes
-Albery_2019:
-  preprint: yes
-  long_description: |
-    [Greg Albery](https://www.gregalbery.me/) interned at EcoHealth Alliance for the end of his Ph.D. and did this excellent work using GAMs to understand patterns in what mammals carry common viruses.
-Pedersen_2019:
-  long_description: |
-    This is my first and only paper that [actually started on a bar napkin](https://twitter.com/noamross/status/684231556777443328).
+wells_2016:
+  name: wells_2016
+  doi: 10.1080/10584609.2016.1224416
+  type: paper
+  title: How Trump drove coverage to the nomination - Hybrid media campaigning
+  authors:
+  - Chris Wells
+  - Dhavan V Shah
+  - Jon C Pevehouse
+  - JungHwan Yang
+  - Ayellet Pelled
+  - Frederick Boehm
+  - Josephine Lukito
+  - Shreenita Ghosh
+  - Jessica L Schmidt
+  date: '2016-09-08'
+  exurl: https://doi.org/10.1080/10584609.2016.1224416
