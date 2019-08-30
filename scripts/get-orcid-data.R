@@ -25,7 +25,8 @@ set_class <- function(x, new_class) {
 ## ------------------------------------------------------------------------
 cites2 <- cites %>%
   dplyr::distinct(ids, .keep_all = TRUE) %>%
-  mutate(citation = purrr::map(citation, jsonlite::fromJSON))
+  mutate(citation = purrr::map(citation, jsonlite::fromJSON)) %>%
+  filter(!is.na(ids))
 publist <-
   purrr::map(cites2$citation, function(x) {
     date <-

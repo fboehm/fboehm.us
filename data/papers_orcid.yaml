@@ -106,6 +106,18 @@ Gestwicki_2002:
   - Laura L Kiessling
   date: '2002-07-25'
   exurl: https://dx.doi.org/10.1016/s1074-5521(02)00102-3
+Tauchman_2015:
+  name: Tauchman_2015
+  doi: 10.1038/ncomms10036
+  type: paper
+  title: Stable kinetochore–microtubule attachment is sufficient to silence the spindle
+    assembly checkpoint in human cells
+  authors:
+  - Eric C. Tauchman
+  - Frederick J. Boehm
+  - Jennifer G. DeLuca
+  date: '2015-12-01'
+  exurl: https://dx.doi.org/10.1038/ncomms10036
 Boehm_2019:
   name: Boehm_2019
   doi: 10.1101/550939
@@ -118,33 +130,6 @@ Boehm_2019:
   - Karl W. Broman
   date: '2019-02-16'
   exurl: https://dx.doi.org/10.1101/550939
-Kemis_2019:
-  name: Kemis_2019
-  doi: 10.1101/571075
-  type: paper
-  title: Genetic determinants of gut microbiota composition and bile acid profiles
-    in mice
-  authors:
-  - Julia H. Kemis
-  - Vanessa Linke
-  - Kelsey L. Barrett
-  - Frederick J. Boehm
-  - Lindsay L. Traeger
-  - Mark P. Keller
-  - Mary E. Rabaglia
-  - Kathryn L. Schueler
-  - Donald S. Stapleton
-  - Daniel M. Gatti
-  - Gary A. Churchill
-  - Daniel Amador-Noguez
-  - Jason D. Russell
-  - Brian S. Yandell
-  - Karl W. Broman
-  - Joshua J. Coon
-  - Alan D. Attie
-  - Federico E. Rey
-  date: '2019-03-08'
-  exurl: https://dx.doi.org/10.1101/571075
 Boehm_2019:
   name: Boehm_2019
   doi: 10.21105/joss.01435
@@ -195,21 +180,3 @@ Kemis_2019:
   - Federico E. Rey
   date: '2019-08-29'
   exurl: https://dx.doi.org/10.1371/journal.pgen.1008073
-Mark_:
-  name: Mark_
-  doi: ~
-  type: paper
-  title: P2-S9. 07 Economic risk factors for syphilis infection among pregnant women
-    in rural Haiti
-  authors:
-  - J Mark
-  - L Wesler
-  - C Oswald
-  - F Léandre
-  - P Nevil
-  - D Bertrand
-  - J Bertrand
-  - F Boehm
-  - MC Smith Fawzi
-  date: .na.character
-  exurl: https://dx.doi.org/

@@ -1,6 +1,6 @@
-baseurl: "https://www.noamross.net/"
+baseurl: "https://fboehm.us"
 languageCode: "en-us"
-title: "noamross.net"
+title: "Frederick Boehm's website"
 enableEmoji: true
 pygmentsCodefences: true
 pygmentsStyle: "lovelace"
@@ -10,10 +10,10 @@ permalinks:
   blog: "/blog/:slug/"
 
 author:
-  name: "Noam Ross"
-  email: "noam.ross@gmail.com"
+  name: "Frederick Boehm"
+  email: "frederick.boehm@gmail.com"
 params:
-  title: "Dr. Noam Ross"
+  title: ""
   copyright: "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
-  description: "Senior Research Scientist, @EcoHealthNYC. Editor, @rOpenSci. Disease and theoretical ecology, #rstats, open science + code. Also fun, love, progress + justice."
+  description: ""
 rssLimit: 50
