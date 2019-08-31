@@ -1,0 +1,91 @@
+imgc-poster-2018:
+  name: imgc-poster-2018
+  description: Best poster award at the annual International Mammalian Genome Conference
+  source: International Mammalian Genome Society
+  date: 2018
+imgc-travel-2018:
+  name: imgc-travel-2018
+  description: Conference travel scholarship to attend the annual International Mammalian Genome Conference
+  source: International Mammalian Genome Society
+  date: 2018
+ires-2013:
+  name: ires-2013
+  description: Research ethics fellowship to participate in the Integrating research ethics and scholarship program.
+  source: University of Wisconsin-Madison
+  date: 2013
+newarts-2013:
+  name: newarts-2013
+  description: New Arts Venture Challenge Award for collaborative research to complete the Victorian Eyes art exhibit.
+  source: University of Wisconsin-Madison
+  date: 2013
+hhmi-2006:
+  name: hhmi-2006
+  description: Medical Student Research Training Fellowship
+  source: Howard Hughes Medical Institute
+  date: 2006
+shapiro-2004:
+  name: shapiro-2004
+  description: Shapiro research award
+  source: University of Wisconsin-Madison Department of Family Medicine
+  date: 2004
+locus-2004:
+  name: locus-2004
+  description: LOCUS research stipend
+  source: University of Wisconsin-Madison Department of Family Medicine
+  date: 2004
+nsf-2001:
+  name: nsf-2001
+  description: Graduate research fellowship
+  source: National Science Foundation
+  date: 2001
+bookstore-2001:
+  name: bookstore-2001
+  description: University Bookstore award for outstanding undergraduate thesis
+  source: University of Wisconsin-Madison
+  date: 2001
+meyerhoff-2001:
+  name: meyerhoff-2001
+  description: Meyerhoff Excellence award
+  source: University of Wisconsin-Madison
+  date: 2001
+panek-2000:
+  name: panek-2000
+  description: Edward Panek Memorial scholarship
+  source: University of Wisconsin-Madison Department of Chemistry
+  date: 2000
+hilldale-1999:
+  name: hilldale-1999
+  description: Hilldale Undergraduate Research fellowship
+  source: University of Wisconsin-Madison
+  date: 1999
+wisconsinidea-1999:
+  name: wisconsinidea-1999
+  description: Wisconsin Idea fellowship
+  source: University of Wisconsin-Madison
+  long_description: >
+    Funded to support the Salvation Army Learning Center service project.
+  date: 1999
+chemistry-1998:
+  description: Summer research scholarship
+  name: chemistry-1998
+  source: University of Wisconsin-Madison Department of Chemistry
+  date: 1998
+deanslist:
+  name: deanslist
+  description: Dean's list
+  source: University of Wisconsin-Madison
+  date: 2001
+  long_description: >
+    I was on the Dean's list in Spring 1997, Spring 1998, Fall 1998, Spring 1999, Fall 1999, Spring 2000, Fall 2000, and Spring 2001
+academic-1996:
+  name: academic-1996
+  description: Wisconsin Academic Excellence scholarship
+  source: University of Wisconsin-Madison
+  date: 1996
+  long_description: >
+    I received partial tuition remissions for 8 semesters of study.
+eagle-1995:
+  name: eagle-1995
+  description: Eagle Scout award
+  source: Boy Scouts of America
+  date: 1995
