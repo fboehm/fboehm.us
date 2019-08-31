@@ -1,3 +1,12 @@
+thesis:
+  type: presentation
+  name: thesis
+  slides: https://github.com/fboehm/diss-slides
+  description: Testing pleiotropy in multiparental populations
+  venue: Thesis defense, University of Wisconsin-Madison, Madison, Wisconsin, USA
+  long_description: >
+    Slides for my thesis defense
+  date: April 21, 2019
 jsm-2018:
   type: presentation
   name: jsm-2018
