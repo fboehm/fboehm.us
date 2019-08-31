@@ -5,7 +5,7 @@ jsm-2018:
   description: Testing pleiotropy in multiparental populations
   venue: Joint Statistical Meetings, Vancouver, British Columbia, Canada
   long_description: >
-    Slide presentation on thesis research into testing pleiotropy vs. separate QTL in multiparental populations.
+    Slide presentation on testing pleiotropy vs. separate QTL in multiparental populations.
   date: 2018-08-01
 ctc-2018:
   type: presentation
@@ -21,5 +21,5 @@ imgc-2018:
   poster: https://github.com/fboehm/imgc2018-poster-latex2
   venue: International Mammalian Genomics Conference, Rio Mar, Puerto Rico, USA
   long_description: >
-    Awarded best poster honors.
+    Awarded best poster honor.
   date: 2018-11-06

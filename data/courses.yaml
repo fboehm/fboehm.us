@@ -1,19 +1,19 @@
-teaching-statistics-2018:
-  name: teaching-statistics
-  type: short course
-  description: "Teaching statistics"
+teaching-statistics-s18:
+  name: teaching-statistics-s18
+  type: course
+  description: Teaching statistics
   venue: "(online)"
   long_description: >
     Professor Rick Nordheim (UW-Madison) and I taught an online CIRTL short (6-week) course for graduate students and postdocs who will teach introductory statistics courses in their future careers.
   date: 2018-04-30
 intro-stats-f16:
-  name: intro-stats
+  name: intro-stats-f16
   type: course
   description: Introductory statistics for biologists (Statistics 371)
   venue: University of Wisconsin-Madison
   date: 2016-12-20
 intro-stats-s16:
-  name: intro-stats
+  name: intro-stats-s16
   type: course
   description: Introductory statistics for engineers (Statistics 324)
   venue: University of Wisconsin-Madison
