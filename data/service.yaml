@@ -111,6 +111,8 @@ mentor_robert:
   type: service
   start_date: "2015-05-01"
   end_date: "2016-05-01"
+  long_description: >
+    Project: Topic Modeling of Tweets to Detect Events
 mentor_jinyu:
   name: mentor_jinyu
   description: Research mentor to undergraduate researcher Jinyu Xia
@@ -118,4 +120,5 @@ mentor_jinyu:
   type: service
   start_date: "2015-08-01"
   end_date: "2016-08-01"
-
+  long_description: >
+    Project: Tweet Sentiments Reflect Stock Market Trends
