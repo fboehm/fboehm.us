@@ -104,3 +104,18 @@ social_committee:
   type: service
   start_date: "2012-01-01"
   end_date: "2014-05-01"
+mentor_robert:
+  name: mentor_robert
+  description: Research mentor to undergraduate researcher Robert Turner
+  source: University of Wisconsin-Madison
+  type: service
+  start_date: "2015-05-01"
+  end_date: "2016-05-01"
+mentor_jinyu:
+  name: mentor_jinyu
+  description: Research mentor to undergraduate researcher Jinyu Xia
+  source: University of Wisconsin-Madison
+  type: service
+  start_date: "2015-08-01"
+  end_date: "2016-08-01"
+
