@@ -1,0 +1,106 @@
+gsa-peer-2018:
+  name: gsa-peer-2018
+  description: Peer review trainee
+  source: Genetics Society of America
+  type: service
+  start_date: "2018-01-01"
+  end_date: "2019-09-01"
+  exurl: http://genestogenomes.org/learning-to-peer-review-program-update/
+asa-workshop-2016:
+  name: asa-workshop-2016
+  description: Participant
+  source: American Statistical Association workshop on communicating with the media and the public
+  type: service
+  date: "2016-11-01"
+carpentries:
+  name: carpentries
+  description: Instructor
+  source: The Carpentries
+  type: service
+  start_date: "2017-05-01"
+  end_date: "2019-09-01"
+  exurl: https://carpentries.org
+  long_description: >
+    The Carpentries teaches foundational coding and data science skills to researchers worldwide.
+science_olympiad:
+  name: science_olympiad
+  description: Coach
+  source: Madison Science Olympiad Team
+  type: service
+  start_date: "2013-10-01"
+  end_date: "2014-03-01"
+mathcounts:
+  name: mathcounts
+  description: Assistant coach
+  source: Madison Mathcounts Team
+  type: service
+  start_date: "2012-09-01"
+  end_date: "2013-05-01"
+salc:
+  name: salc
+  description: Founder and director
+  source: Salvation Army Learning Center
+  type: service
+  start_date: "1998-09-01"
+  end_date: "2000-05-01"
+cubscouts:
+  name: cubscouts
+  description: Cub Scouts den leader
+  source: Boy Scouts of America
+  type: service
+  start_date: "1998-09-01"
+  end_date: "2000-06-01"
+compmethods:
+  name: compmethods
+  description: Co-coordinator
+  source: Computational methods in communications research group
+  type: service
+  start_date: "2016-09-01"
+  end_date: "2016-12-01"
+bookgroup:
+  name: bookgroup
+  description: Coordinator
+  source: WISCIENCE graduate student book group
+  type: service
+  start_date: "2015-06-01"
+  end_date: "2016-05-01"
+dha:
+  name: dha
+  description: Organizer
+  source: Data, humanities, and art symposium at University of Wisconsin-Madison
+  type: service
+  start_date: "2013-09-01"
+  end_date: "2013-11-01"
+undergrad_symposium-13:
+  name: undergrad_symposium-13
+  description: Moderator
+  source: University of Wisconsin-Madison Undergraduate Research Symposium
+  type: service
+  date: "2013-04-01"
+undergrad_symposium-12:
+  name: undergrad_symposium-12
+  description: Moderator
+  source: University of Wisconsin-Madison Undergraduate Research Symposium
+  type: service
+  date: "2012-04-01"
+peer_mentor_review:
+  name: peer_mentor_review
+  description: Reviewer
+  source: University of Wisconsin-Madison Graduate Student Peer Mentor Award Committee
+  type: service
+  start_date: "2013-04-01"
+  end_date: "2013-04-30"
+travel_review:
+  name: travel_review
+  description: Reviewer
+  source: University of Wisconsin-Madison Graduate School Vilas Travel Grant Review Committee
+  type: service
+  start_date: "2012-10-01"
+  end_date: "2012-11-01"
+social_committee:
+  name: social_committee
+  description: Member
+  source: University of Wisconsin-Madison Statistics Department Social Committee
+  type: service
+  start_date: "2012-01-01"
+  end_date: "2014-05-01"
