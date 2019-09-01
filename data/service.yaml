@@ -122,3 +122,11 @@ mentor_jinyu:
   end_date: "2016-08-01"
   long_description: >
     Project: Tweet Sentiments Reflect Stock Market Trends
+letters:
+  name: letters
+  description: Scientist penpal
+  source: Letters to a Pre-scientist
+  type: service
+  start_date: "2018-10-01"
+  end_date: "2019-05-01"
+  exurl: https://www.prescientist.org/

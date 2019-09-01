@@ -31,7 +31,7 @@ publist <-
   purrr::map(cites2$citation, function(x) {
     date <-
       list(
-        name = paste0(x$author$family[1], "_", x$created$`date-parts`[1]),
+        name = paste0(x$author$family[1], "_", x$author$family[2], "_", x$created$`date-parts`[1]),
         doi = x$DOI,
         type = "paper",
         title = x$title,
