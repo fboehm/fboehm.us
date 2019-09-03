@@ -5,7 +5,7 @@ gsa-peer-2018:
   type: service
   start_date: "2018-09-01"
   end_date: "2019-09-01"
-  exurl: http://genestogenomes.org/learning-to-peer-review-program-update/
+  exurl: "http://genestogenomes.org/learning-to-peer-review-program-update/"
 asa-workshop-2016:
   name: asa-workshop-2016
   description: Participant
@@ -19,7 +19,7 @@ carpentries:
   type: service
   start_date: "2017-05-01"
   end_date: "2019-09-01"
-  exurl: https://carpentries.org
+  exurl: "https://carpentries.org"
   long_description: >
     The Carpentries teaches foundational coding and data science skills to researchers worldwide.
 science_olympiad:
@@ -129,4 +129,4 @@ letters:
   type: service
   start_date: "2018-10-01"
   end_date: "2019-05-01"
-  exurl: https://www.prescientist.org/
+  exurl: "https://www.prescientist.org/"
