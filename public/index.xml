@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frederick Boehm&#39;s website</title>
-    <link>https://fboehm.us/</link>
+    <link>/</link>
     <description>Frederick Boehm&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,24 +10,24 @@
     <webMaster>frederick.boehm@gmail.com (Frederick Boehm)</webMaster>
     <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://fboehm.us/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blogs</title>
-      <link>https://fboehm.us/blog/</link>
+      <link>/blog/</link>
       <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
       <author> Frederick Boehm</author>
-      <guid>https://fboehm.us/blog/</guid>
+      <guid>/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://fboehm.us/vitae/</link>
+      <link>/vitae/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author> Frederick Boehm</author>
-      <guid>https://fboehm.us/vitae/</guid>
+      <guid>/vitae/</guid>
       <description></description>
     </item>
     
