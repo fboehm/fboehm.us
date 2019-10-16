@@ -1,3 +1,12 @@
+ecs-2019:
+  type: presentation
+  name: ecs-2019
+  slides: https://github.com/fboehm/presentations/tree/master/gsa-early-career-seminar
+  description: Testing pleiotropy in multiparental populations
+  venue: Early career seminar, Genetics Society of America, online
+  long_description: >
+    Seminar slides
+  date: 2019-10-17
 thesis-slides:
   type: presentation
   name: thesis-slides
