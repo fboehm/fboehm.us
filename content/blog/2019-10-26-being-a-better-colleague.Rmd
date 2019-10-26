@@ -1,0 +1,88 @@
+---
+title: Being a better colleague
+author: Frederick Boehm
+date: '2019-10-26'
+publisheddate: 2019-10-26
+slug: being-a-better-colleague
+categories: []
+tags: []
+draft: false
+params:
+  lastmod: !r lubridate::now()
+---
+
+## Overview
+
+I recently started a new job at the University of Massachusetts Medical School. I began to wonder if I was doing all that I could to promote advancement of scientists and scholars who aren't white men. After studying many years at universities, I have come to believe that many individuals who could become highly successful scientists don't complete (and sometimes don't begin) their training for a variety of reasons. I might have little control over some things, but I am determined to make my workplace more welcoming and hospitable for all.
+
+This led me to initiate the below email exchange.
+
+
+
+### First email: Fred to Yates
+
+> Hi, Yates!
+
+> How are you? I imagine that you and Ryan are settling into autumn in Seattle. I just relocated to Massachusetts to start a postdoc position at the UMass Medical School. It is off to a great start. They have and will generate lots of cool data, with my inputs into experimental design and data analysis.
+
+> I'm writing now with a rather personal question. I'm trying to understand some of the barriers to success that women in STEM disciplines face. Would you be willing to share your thoughts on this? I'd also be grateful for any suggestions that one might follow to promote success of people who aren't white dudes. Being a white guy, I fear that I'm sometimes blind to obstacles that others face because of their identities.
+
+> Thank you,
+> fred
+
+### Second email: Yates to Fred
+
+> Hey Fred! Thanks so much for your email. I'm glad you found a postdoc you are excited about. 
+
+> Sorry for the delayed response. I wanted to take some time to see what new thoughts come to me. It's great that you are concerned about trying to be a more welcoming and inclusive colleague for women and POC, and recognizing that you're blind to some things is a great way to start. You'll always be blind to some things, you can't change that, you can just reduce the damage it does by being more aware of your limited point of view. I jotted down a few ideas and hopefully you will find these useful. Let me know if you have any questions. I'd be happy to talk about this more. You are great :)
+
+> First, remember that women and non-white people are coming to academia with 2 decades or more of crummy things happening to them because of their identity, so people might be sensitive to things not because you did anything wrong, but because stuff has happened in the past and they're wary of any red flags that could signal that could signal someone if uncool/unsafe. 
+
+> Never comment on a woman's appearance. For me, even comments like "oh you're dressed up today" remind me that my appearance is being noticed and judged, which can make me self conscious and make me wonder whether it's shaping people's perceptions of me. If you know a woman really well and you know that clothing, accessory, etc. choices are a part of how they show off their personality, than you can compliment something they selected that shows off their taste and style. Also, never comment on a black person's hair. There are rules about this that we white people don't know, so just don't do it. 
+
+> Make sure you give other's credit for their ideas in group meetings, especially women, POC, and people who are junior to you.
+
+> Look for opportunities to promote and highlight the work of women, POC, and junior folks. Like, when I put together an invited session for a conference, I always think about how I can use it to support someone else's career. Try to cultivate peer groups of other early career folks who make a habit of doing this for each other. 
+
+> As you advance in your career (like, as a postdoc, you may supervise or mentor students), be sure to give junior folks you work with the same opportunities. Some male faculty members are only comfortable going out to lunch or drinks with male students, not females, which then puts female students at a disadvantage for research, mentoring, and career opportunities. 
+
+> Don't close the office or room door when you're in the office with a female colleague or student unless the door/walls are glass and see through. Again, you're not going to do anything wrong, but creepy dudes have done things wrong in situations like this before. 
+
+> Avoid making any casual comments about politics, especially when it comes to Me Too or racist or sexist behaviors or policies. Even if people have similar political opinions as you, they may not feel comfortable discussing things and any joke-like or flippant attitude can be off-putting. This isn't to say you shouldn't discuss political things, it's just to say that you should be sensitive to how those conversations go. Some political topics are intellectual for folks (for example, me with conversations about immigration, it doesn't affect me personally) while they are very immediate and personal for others (for example, someone who is undocumented may be less inclined to discuss immigration off the cuff). 
+
+> Best,
+> Yates
+
+
+### Third email: Fred to Yates
+
+> Yates! Sorry for the late reply.
+
+> Thank you so much for your thoughtful message! I'm delighted that you took the time to write such a helpful, actionable note. I almost want to make a blog post from your reply. I would hide your identity, but use your language, if you're ok with that. I feel like people other than me might benefit from reading your words.
+
+> Would it be ok for me to draft a blog post - it would be nearly verbatim what you wrote, plus a sentence or two about context in which you and I are communicating - and send it to you for review before posting? I don't wish to make more work for you, but being able to share your ideas with others might be useful.
+
+> Please let me know what you think when you have a moment.
+
+> fred
+
+### Fourth email: Yates to Fred
+
+> So sorry for the slow reply. I'm just about to leave on vacation (and have been busy the last few days getting everything taken care of so I can actually go on vacation, ahaha). I think a blog post is a great idea. I'm happy to review it. Anonymous friend is fine, but it's also ok if you want to make a note that some of the ideas came from me, I'm totally comfortable with that.
+
+> A follow-up on one of my points, I was talking with a colleague of color and she agrees that making someone who is personally affected by a certain politic topic (e.g., immigration or racism) is not welcome at work or school. For me, my opinions aren't absent from my work (I have a black lives matter sign in my office, I do research on health disparities, etc.) but I shouldn't confront a person of color directly and make them talk to me about police brutality, institutionalized racism, etc. 
+
+> Your blog post should also include a note that we might be totally off base or missing something and that feedback from effected people is welcome. (Feedback from racist white people/sexist men, not so much welcome ;) )
+
+> Hope you have a good Friday!
+
+### Disclaimer
+
+Yates and I have no expertise in methods for making a friendlier workplace, and we might be completely wrong about some things. If you disagree with anything that we've written, please feel free to send me an email: frederick.boehm@gmail.com. 
+
+
+
+### Colophon
+
+Last modified: `r params$lastmod`
+

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Frederick Boehm&#39;s website</title>
@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>frederick.boehm@gmail.com (Frederick Boehm)</managingEditor>
     <webMaster>frederick.boehm@gmail.com (Frederick Boehm)</webMaster>
-    <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Being a better colleague</title>
+      <link>/blog/being-a-better-colleague/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/being-a-better-colleague/</guid>
+      <description>Overview I recently started a new job at the University of Massachusetts Medical School. I began to wonder if I was doing all that I could to promote advancement of scientists and scholars who aren’t white men. After studying many years at universities, I have come to believe that many individuals who could become highly successful scientists don’t complete (and sometimes don’t begin) their training for a variety of reasons.</description>
+    </item>
     
     <item>
       <title>World-wide Web and Social Media</title>
