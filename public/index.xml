@@ -1,34 +1,105 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frederick Boehm&#39;s website</title>
     <link>/</link>
-    <description>Frederick Boehm&#39;s website</description>
+    <description>Recent content on Frederick Boehm&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>frederick.boehm@gmail.com (Frederick Boehm)</managingEditor>
     <webMaster>frederick.boehm@gmail.com (Frederick Boehm)</webMaster>
     <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blogs</title>
-      <link>/blog/</link>
+      <title>World-wide Web and Social Media</title>
+      <link>/blog/internet-social-media/</link>
       <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
-      <author> Frederick Boehm</author>
-      <guid>/blog/</guid>
-      <description></description>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/internet-social-media/</guid>
+      <description>I’ve followed a series of blog posts from Cal Newport at http://calnewport.com/blog/ (with posts like this) in which Newport criticizes social media platforms for, among other things, limiting the scope of internet browsing. Newport, a computer science professor and writer, proudly has never had a social media account.
+Until March 2018, I regularly consumed information from Facebook, Twitter, and even Instagram and Linkedin. Termination of these accounts aligned with my larger professional and scholarly goals of wanting to focus more on my studies and other, engaging, activities.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>/vitae/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author> Frederick Boehm</author>
-      <guid>/vitae/</guid>
-      <description></description>
+      <title>R package site incorporation into my personal website</title>
+      <link>/blog/r-package-site-incorporation-into-my-personal-website/</link>
+      <pubDate>Sat, 24 Nov 2018 10:01:53 -0600</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/r-package-site-incorporation-into-my-personal-website/</guid>
+      <description>Overview I’ve been developing the R package qtl2pleio. It’s now at a stage where others can use it. I recently found the R package pkgdown, which allows developers to build, in an automated fashion, websites for their packages. I posted an entry on pkgdown earlier this year. I now wish to communicate my strategy for incorporating the package site into my personal website, https://fboehm.us. I write this primarily as a reminder to myself.</description>
+    </item>
+    
+    <item>
+      <title>reticulate R package &amp; Travis</title>
+      <link>/blog/reticulate-r-package-travis/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/reticulate-r-package-travis/</guid>
+      <description>I like to use Travis CI with my R packages. I recently wrote a R package, limmbo2, that is a wrapper for the python module limmbo. I used the R package reticulate, from Rstudio. I struggled for about 3 hours to write a .travis.yml file for limmbo2. Finally, I found a viable solution. I’m writing this blog post in hopes that it might be useful to myself and others in the future.</description>
+    </item>
+    
+    <item>
+      <title>limmbo2 R package now on Github</title>
+      <link>/blog/limmbo2-r-package-now-on-github/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/limmbo2-r-package-now-on-github/</guid>
+      <description>I have posted to Github the R package limmbo2. limmbo2 is a R wrapper to the freely available python module limmbo. I mention my interest in limmbo in an earlier blog post, so I won’t repeat it here.</description>
+    </item>
+    
+    <item>
+      <title>Joan Didion’s &#34;On self-respect&#34;</title>
+      <link>/blog/joan-didions-on-self-respect/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/joan-didions-on-self-respect/</guid>
+      <description>Yesterday I read for the first time Joan Didion’s essay “On self-respect” in her 1968 collection of essays “Slouching towards Bethlehem”. “On self-respect” originally appeared in Vogue in 1961. Here is the text of the essay, as it appeared in 1961.
+Among the more powerful lines from the essay are the following:
+“Nonetheless, character — the willingness to accept responsibility for one’s own life — is the source from which self-respect springs.</description>
+    </item>
+    
+    <item>
+      <title>pkgdown R package for generating package websites on Github</title>
+      <link>/blog/pkgdown-r-package-for-generating-package-websites-on-github/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/pkgdown-r-package-for-generating-package-websites-on-github/</guid>
+      <description>I recently learned about the R package, pkgdown, an R package that provides functions that make it easy to build a website from an R package on Github.
+I decided to build a site for my package qtl2pleio. The site is here. It features a documentation page for each function in the package.
+Using pkgdown is extremely easy.
+devtools::install_github(&amp;quot;r-lib/pkgdown&amp;quot;) library(pkgdown) build_site() pkgdown is used by more than 1300 packages, according to its README file.</description>
+    </item>
+    
+    <item>
+      <title>Mathematical Writing by Donald Knuth, Tracy Larrabee, and Paul Roberts</title>
+      <link>/blog/mathematical-writing-by-donald-knuth-tracy-larrabee-and-paul-roberts/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/mathematical-writing-by-donald-knuth-tracy-larrabee-and-paul-roberts/</guid>
+      <description>I recently applied for a peer review training program that the Genetics Society of America organizes. An advisor kindly agreed to write a recommendation for my application. In discussing the program application with him, he told me that most of what he knows about refereeing he learned from Don Knuth’s book, Mathematical Writing. I decided to find a copy of the book. The publisher, MAA, says that the book is out of print.</description>
+    </item>
+    
+    <item>
+      <title>John Roberts&#39;s Commencement Address</title>
+      <link>/blog/john-robertss-commencement-address/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/john-robertss-commencement-address/</guid>
+      <description>This afternoon, while listening to “All Things Considered” on Wisconsin Public Radio, I heard an excerpt from John Roberts’s recent commencement address. Here is the story from “All Things Considered”. Here is the YouTube video.
+Roberts spoke at his son’s 9th grade graduation from The Cardigan Mountain School, a boarding school for boys in grades 6 to 9, on June 3, 2017.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with blogdown</title>
+      <link>/blog/getting-started-with-blogdown/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick Boehm)</author>
+      <guid>/blog/getting-started-with-blogdown/</guid>
+      <description>While browsing the internet, I stumbled upon Rstudio’s new package blogdown. I read posts from Karl Broman and found the the book that the package author - Yihui Xie - freely shares.
+One tricky part of setting up the website involved the DNS settings. I bought the site fboehm.us through google domains. While the blogdown book provides instructions for DNS settings for other domain name providers, at the time I set up my site, they hadn’t written instructions for use with google domains.</description>
     </item>
     
   </channel>
