@@ -12,7 +12,7 @@ permalinks:
   blog: "/blog/:slug/"
 
 author:
-  name: "Frederick Boehm"
+  name: "Frederick J. Boehm"
   email: "frederick.boehm@gmail.com"
 params:
   title: "Frederick Boehm's website"
