@@ -2,7 +2,9 @@ theme: "noamross"
 baseURL: "https://fboehm.us/"
 languageCode: "en-us"
 title: "fboehm.us"
+enableRobotsTXT: true
 enableEmoji: true
+enableGitInfo: true
 googleAnalytics: UA-46757486-5
 pygmentsCodefences: true
 pygmentsStyle: "lovelace"
