@@ -9,8 +9,6 @@ body {
   font-size: 1.05em;
   line-height: 1.6em;
   background-color: #ffffff;
-  /*	background-image: url(../img/grid-18px-masked.png);
-  background-repeat: repeat-x; */
 }
 
 blockquote {
@@ -98,7 +96,6 @@ form, input[type="search"], select[multiple="multiple"] {
 h1, h2, h3, h4, h5 {
   font-family: 'IM Fell English', 'Trebuchet MS', Helvetica, Arial, sans-serif;
   font-style: normal;
-  color: #b24;
   font-weight: normal;
 
 }
@@ -115,11 +112,9 @@ h2, h3 {
 }
 
 .label-red {
-  background-color: #b24;
 }
 
 a {
-  color: #b24;
   text-decoration: none;
 }
 
@@ -347,7 +342,6 @@ header h1 {
 }
 
 #footer a {
-  color: #b24;
 }
 
 .fa-li {
@@ -355,7 +349,6 @@ header h1 {
 }
 
 a .fa, .far, .fab, .fas {
-  color: rgb(238, 136, 136);
 }
 
 /* =Tablet (Portrait)

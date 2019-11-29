@@ -21,7 +21,8 @@ set_class <- function(x, new_class) {
   class(x) <- new_class
   x
 }
-
+## use bib2df
+refR::bib2yaml(file = "gscholar.bib") # produces a yml file gscholar.yml
 ## ------------------------------------------------------------------------
 cites2 <- cites %>%
   dplyr::distinct(ids, .keep_all = TRUE) %>%
@@ -34,6 +35,7 @@ publist <-
         name = paste0(x$author$family[1], "_", x$author$family[2], "_", x$created$`date-parts`[1]),
         doi = x$DOI,
         type = "paper",
+        source = x$`container-title`,
         title = x$title,
         authors = as.list(paste(x$author$given, x$author$family)),
         date = as.character(lubridate::as_date(paste(x$created$`date-parts`, collapse="-"))),
