@@ -1,0 +1,519 @@
+---
+references:
+- id: gestwicki2002cell
+  type: article-journal
+  author:
+  - family: Gestwicki
+    given: Jason E
+  - family: Strong
+    given: Laura E
+  - family: Cairo
+    given: Christopher W
+  - family: Boehm
+    given: Frederick J
+  - family: Kiessling
+    given: Laura L
+  issued:
+  - year: '2002'
+  title: Cell aggregation by scaffolded receptor clusters
+  container-title: Chemistry & biology
+  publisher: Cell Press
+  page: '163-169'
+  volume: '9'
+  issue: '2'
+
+- id: laurie2010quality
+  type: article-journal
+  author:
+  - family: Laurie
+    given: Cathy C
+  - family: Doheny
+    given: Kimberly F
+  - family: Mirel
+    given: Daniel B
+  - family: Pugh
+    given: Elizabeth W
+  - family: Bierut
+    given: Laura J
+  - family: Bhangale
+    given: Tushar
+  - family: Boehm
+    given: Frederick
+  - family: Caporaso
+    given: Neil E
+  - family: Cornelis
+    given: Marilyn C
+  - family: Edenberg
+    given: Howard J
+  - literal: others
+  issued:
+  - year: '2010'
+  title: Quality control and quality assurance in genotypic data for genome-wide association
+    studies
+  container-title: Genetic epidemiology
+  publisher: Wiley Subscription Services, Inc., A Wiley Company Hoboken
+  page: '591-602'
+  volume: '34'
+  issue: '6'
+
+- id: marchani2009contrasting
+  type: paper-conference
+  author:
+  - family: Marchani
+    given: Elizabeth E
+  - family: Di
+    given: Yanming
+  - family: Choi
+    given: Yoonha
+  - family: Cheung
+    given: Charles
+  - family: Su
+    given: Ming
+  - family: Boehm
+    given: Frederick
+  - family: Thompson
+    given: Elizabeth A
+  - family: Wijsman
+    given: Ellen M
+  issued:
+  - year: '2009'
+  title: Contrasting identity-by-descent estimators, association studies, and linkage
+    analyses using the framingham heart study data
+  container-title: BMC proceedings
+  collection-number: '7'
+  publisher: BioMed Central
+  page: S102
+  volume: '3'
+
+- id: fawzi2010economic
+  type: article-journal
+  author:
+  - family: Fawzi
+    given: MC Smith
+  - family: Lambert
+    given: W
+  - family: Boehm
+    given: F
+  - family: Finkelstein
+    given: JL
+  - family: Singler
+    given: JM
+  - family: Léandre
+    given: F
+  - family: Nevil
+    given: P
+  - family: Bertrand
+    given: D
+  - family: Claude
+    given: MS
+  - family: Bertrand
+    given: J
+  - literal: others
+  issued:
+  - year: '2010'
+  title: 'Economic risk factors for hIV infection among women in rural haiti: Implications
+    for hIV prevention policies and programs in resource-poor settings'
+  title-short: Economic risk factors for hIV infection among women in rural haiti
+  container-title: Journal of Women’s Health
+  publisher: Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY
+    10801 USA
+  page: '885-892'
+  volume: '19'
+  issue: '5'
+
+- id: mark2011p2
+  type: article-journal
+  author:
+  - family: Mark
+    given: J
+  - family: Wesler
+    given: L
+  - family: Oswald
+    given: C
+  - family: Léandre
+    given: F
+  - family: Nevil
+    given: P
+  - family: Bertrand
+    given: D
+  - family: Bertrand
+    given: J
+  - family: Boehm
+    given: F
+  - family: Fawzi
+    given: MC Smith
+  issued:
+  - year: '2011'
+  title: P2-s9. 07 economic risk factors for syphilis infection among pregnant women
+    in rural haiti
+  container-title: Sex Transm Infect
+  publisher: BMJ Publishing Group Ltd
+  page: A263-A263
+  volume: '87'
+  issue: Suppl 1
+
+- id: moorthy2009pathophysiology
+  type: book
+  author:
+  - family: Moorthy
+    given: A Vishnu
+  - family: Becker
+    given: Bryan Neil
+  - family: Boehm III
+    given: Frederick J
+  - family: Djamali
+    given: Arjang
+  issued:
+  - year: '2009'
+  title: Pathophysiology of kidney disease and hypertension
+  publisher: Saunders/Elsevier
+
+- id: boehm1997lone
+  type: article-journal
+  author:
+  - family: Boehm
+    given: Fred
+  issued:
+  - year: '1997'
+  title: The lone male wolf of the sandhill wildlife area
+  container-title: International Wolf
+  page: '7-9'
+  volume: '7'
+  issue: '3'
+
+- id: fasella2000synthesis
+  type: paper-conference
+  author:
+  - family: Fasella
+    given: 'E'
+  - family: Boehm
+    given: FJ
+  - family: Kiessling
+    given: LL
+  issued:
+  - year: '2000'
+  title: Synthesis of galactosyl-alpha (1-3)-galactosyl epitopes for use in immunological
+    studies.
+  container-title: ABSTRACTS oF pAPERS oF tHE aMERICAN cHEMICAL sOCIETY
+  publisher: AMER CHEMICAL SOC 1155 16TH ST, NW, WASHINGTON, DC 20036 USA
+  page: U108-U108
+  volume: '219'
+
+- id: gestwicki2001mechanistic
+  type: paper-conference
+  author:
+  - family: Gestwicki
+    given: JE
+  - family: Cairo
+    given: CW
+  - family: Boehm
+    given: FJ
+  - family: Kiessling
+    given: LL
+  issued:
+  - year: '2001'
+  title: 'Mechanistic origins of the valency effect: Multivalent ligand binding
+    studied by surface plasmon resonance and isothermal titration calorimetry.'
+  title-short: Mechanistic origins of the valency effect
+  container-title: ABSTRACTS oF pAPERS oF tHE aMERICAN cHEMICAL sOCIETY
+  publisher: AMER CHEMICAL SOC 1155 16TH ST, NW, WASHINGTON, DC 20036 USA
+  page: U56-U56
+  volume: '221'
+
+- id: dove2014strategy
+  type: article-journal
+  author:
+  - family: Dove
+    given: William F
+  - family: Shedlovsky
+    given: Alexandra
+  - family: Clipson
+    given: Linda
+  - family: Amos-Landgraf
+    given: James M
+  - family: Halberg
+    given: Richard B
+  - family: Krentz
+    given: Kathleen J
+  - family: Boehm
+    given: Frederick J
+  - family: Newton
+    given: Michael A
+  - family: Adams
+    given: David J
+  - family: Keane
+    given: Thomas M
+  issued:
+  - year: '2014'
+  title: A strategy to identify dominant point mutant modifiers of a quantitative
+    trait
+  container-title: 'G3: Genes, Genomes, Genetics'
+  publisher: 'G3: Genes, Genomes, Genetics'
+  page: '1113-1121'
+  volume: '4'
+  issue: '6'
+
+- id: costello2014community
+  type: article-journal
+  author:
+  - family: Costello
+    given: James C
+  - family: Heiser
+    given: Laura M
+  - family: Georgii
+    given: Elisabeth
+  - family: Gönen
+    given: Mehmet
+  - family: Menden
+    given: Michael P
+  - family: Wang
+    given: Nicholas J
+  - family: Bansal
+    given: Mukesh
+  - family: Hintsanen
+    given: Petteri
+  - family: Khan
+    given: Suleiman A
+  - family: Mpindi
+    given: John-Patrick
+  - literal: others
+  issued:
+  - year: '2014'
+  title: A community effort to assess and improve drug sensitivity prediction algorithms
+  container-title: Nature biotechnology
+  publisher: Nature Publishing Group
+  page: '1202'
+  volume: '32'
+  issue: '12'
+
+- id: derose2014victorian
+  type: article-journal
+  author:
+  - family: DeRose
+    given: Catherine
+  - family: Roy
+    given: Carrie
+  - family: Boehm
+    given: Fred
+  issued:
+  - year: '2014'
+  title: 'Victorian eyes: Literary, statistical, and artistic perspectives on victorian
+    novels – and dickens’s unfinished murder mystery'
+  title-short: Victorian eyes
+  container-title: Significance
+  publisher: The Royal Statistical Society
+  page: '40-43'
+  volume: '11'
+  issue: '2'
+
+- id: tauchman2015stable
+  type: article-journal
+  author:
+  - family: Tauchman
+    given: Eric C
+  - family: Boehm
+    given: Frederick J
+  - family: DeLuca
+    given: Jennifer G
+  issued:
+  - year: '2015'
+  title: Stable kinetochore–microtubule attachment is sufficient to silence the spindle
+    assembly checkpoint in human cells
+  container-title: Nature communications
+  publisher: Nature Publishing Group
+  page: '10036'
+  volume: '6'
+
+- id: wells2016trump
+  type: article-journal
+  author:
+  - family: Wells
+    given: Chris
+  - family: Shah
+    given: Dhavan V
+  - family: Pevehouse
+    given: Jon C
+  - family: Yang
+    given: JungHwan
+  - family: Pelled
+    given: Ayellet
+  - family: Boehm
+    given: Frederick
+  - family: Lukito
+    given: Josephine
+  - family: Ghosh
+    given: Shreenita
+  - family: Schmidt
+    given: Jessica L
+  issued:
+  - year: '2016'
+  title: 'How trump drove coverage to the nomination: Hybrid media campaigning'
+  title-short: How trump drove coverage to the nomination
+  container-title: Political Communication
+  publisher: Routledge
+  page: '669-676'
+  volume: '33'
+  issue: '4'
+
+- id: wells2016methods
+  type: article-journal
+  author:
+  - family: WELLS
+    given: CHRIS
+  - family: SHAH
+    given: DHAVAN V
+  - family: Pevehouse
+    given: JC
+  - family: YANG
+    given: JUNGHWAN
+  - family: PELLED
+    given: AYELLET
+  - family: BOEHM
+    given: FREDERICK
+  - family: LUKITO
+    given: JOSEPHINE
+  - family: GHOSH
+    given: SHREENITA
+  - family: SCHMIDT
+    given: JESSICA L
+  issued:
+  - year: '2016'
+  title: 'Methods appendix: How trump drove coverage to the nomination: Hybrid media
+    campaigning'
+  title-short: Methods appendix
+  container-title: School of Journalism and Mass Communication, University of Wisconsin-Madison
+    Website
+
+- id: traeger2009acid
+  type: chapter
+  author:
+  - family: Traeger
+    given: Kelly Ann
+  - family: Boehm III
+    given: Frederick J
+  - family: Djamali
+    given: Arjang
+  issued:
+  - year: '2009'
+  title: Acid–Base homeostasis and metabolic alkalosis
+  container-title: Pathophysiology of kidney disease and hypertension
+  publisher: WB Saunders
+  page: '63-77'
+
+- id: boehm2009metabolic
+  type: chapter
+  author:
+  - family: Boehm III
+    given: Frederick J
+  - family: Traeger
+    given: Kelly Ann
+  - family: Djamali
+    given: Arjang
+  issued:
+  - year: '2009'
+  title: Metabolic acidosis and approach to acid–Base disorders
+  container-title: Pathophysiology of kidney disease and hypertension
+  publisher: WB Saunders
+  page: '79-87'
+
+- id: moorthy2009urinalysis
+  type: chapter
+  author:
+  - family: Moorthy
+    given: A Vishnu
+  - family: Boehm III
+    given: Frederick J
+  issued:
+  - year: '2009'
+  title: Urinalysis and an approach to kidney diseases
+  container-title: Pathophysiology of kidney disease and hypertension
+  publisher: WB Saunders
+  page: '121-129'
+
+- id: boehm2019testing
+  type: article-journal
+  author:
+  - family: Boehm
+    given: Frederick J
+  - family: Chesler
+    given: Elissa J
+  - family: Yandell
+    given: Brian S
+  - family: Broman
+    given: Karl W
+  issued:
+  - year: '2019'
+  title: Testing pleiotropy vs. separate qTL in multiparental populations
+  container-title: 'G3: Genes, Genomes, Genetics'
+  publisher: 'G3: Genes, Genomes, Genetics'
+  page: g3-400098
+
+- id: kemis2019genetic
+  type: article-journal
+  author:
+  - family: Kemis
+    given: Julia H
+  - family: Linke
+    given: Vanessa
+  - family: Barrett
+    given: Kelsey L
+  - family: Boehm
+    given: Frederick J
+  - family: Traeger
+    given: Lindsay L
+  - family: Keller
+    given: Mark P
+  - family: Rabaglia
+    given: Mary E
+  - family: Schueler
+    given: Kathryn L
+  - family: Stapleton
+    given: Donald S
+  - family: Gatti
+    given: Daniel M
+  - literal: others
+  issued:
+  - year: '2019'
+  title: Genetic determinants of gut microbiota composition and bile acid profiles
+    in mice
+  container-title: BioRxiv
+  publisher: Cold Spring Harbor Laboratory
+  page: '571075'
+
+- id: boehm2019qtl2pleio
+  type: article-journal
+  author:
+  - family: Boehm
+    given: Frederick J.
+  - family: Yandell
+    given: Brian S.
+  - family: Broman
+    given: Karl W.
+  issued:
+  - year: '2019'
+  title: 'Qtl2pleio: Testing pleiotropy vs. separate qTL in multiparental populations'
+  title-short: Qtl2pleio
+  container-title: Journal of Open Source Software
+
+- id: pelled2018little
+  type: chapter
+  author:
+  - family: Pelled
+    given: Ayellet
+  - family: Lukito
+    given: Josephine
+  - family: Boehm
+    given: Fred
+  - family: Yang
+    given: JungHwan
+  - family: Shah
+    given: Dhavan
+  issued:
+  - year: '2018'
+  title: '“Little marco,”“Lyin’Ted,”“Crooked hillary,” and the “biased” media: How
+    trump used twitter to attack and organize'
+  title-short: “Little marco,”“Lyin’Ted,”“Crooked hillary,” and the “biased” media
+  container-title: Digital discussions
+  publisher: Routledge
+  page: '176-196'
+...

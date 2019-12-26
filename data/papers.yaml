@@ -49,7 +49,6 @@ Laurie_Doheny_2010:
   - Kenneth M. Rice
   - Xiuwen Zheng
   - Bruce S. Weir
-  - NA NA
   date: '2010-08-17'
   exurl: https://dx.doi.org/10.1002/gepi.20516
 Fawzi_Lambert_2010:
@@ -213,11 +212,12 @@ Kemis_Linke_2019:
 Moorthy_Becker_:
   name: Moorthy_Becker_
   doi: ~
-  type: book
+  type: paper
   title: Pathophysiology of Kidney Disease and Hypertension
   authors:
   - A Vishnu Moorthy
   - Bryan Neil Becker
   - Frederick J Boehm III
   - Arjang Djamali
-  date: '2009-12-15'
+  date: .na.character
+  exurl: https://dx.doi.org/
