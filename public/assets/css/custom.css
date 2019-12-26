@@ -12,6 +12,18 @@
   color: green;
 }
 
+[class^="li"] {
+  color: green;
+}
+
+[class^="fa-li"] {
+  color: green;
+}
+
+[class^="fa-heart"] {
+  color: green;
+}
+
 
 
 /* =Typography
