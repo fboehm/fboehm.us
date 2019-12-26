@@ -124,11 +124,14 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111113;
   line-height: 1.5; }
 
 a {
   color: #158df7; }
 
+a:hover {
+  color: #ee2455; }
 
 h1,
 h2,
@@ -433,7 +436,7 @@ pre code {
   top: 0;
   display: block;
   line-height: 1.5;
-  color: #158df7;
+  color: #111113;
   overflow: auto;
   white-space: pre; }
 
@@ -476,15 +479,15 @@ a.is-muted {
 a.is-muted:hover {
   -moz-transition: all linear 0.2s;
   transition: all linear 0.2s;
-  color: #158df7; }
+  color: #111113; }
 
 .is-color-black,
 .is-color-black a {
-  color: #158df7; }
+  color: #111113; }
 
 a.is-color-black:hover,
 .is-color-black a:hover {
-  color: #158df7; }
+  color: #ee2455; }
 
 .is-large {
   font-size: 1.3125em;
@@ -754,7 +757,7 @@ a.label {
 .label.is-tertiary {
   letter-spacing: 0.035em;
   background: none;
-  color: #158df7;
+  color: #111113;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -774,16 +777,16 @@ a.label {
 
 .label.is-error {
   background-color: rgba(238, 36, 85, 0.07);
-  color: #158df7; }
+  color: #ee2455; }
   .label.is-error.is-secondary {
     background-color: transparent;
-    color: #158df7;
+    color: #ee2455;
     border-color: rgba(238, 36, 85, 0.3); }
   .label.is-error.is-tertiary {
     background-color: transparent;
-    color: #158df7; }
+    color: #ee2455; }
   .label.is-error .close:hover {
-    background-color: #158df7; }
+    background-color: #ee2455; }
 
 .label.is-focus {
   background-color: rgba(21, 141, 247, 0.07);

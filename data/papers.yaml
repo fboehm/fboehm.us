@@ -209,9 +209,8 @@ Kemis_Linke_2019:
   - Federico E. Rey
   date: '2019-08-29'
   exurl: https://dx.doi.org/10.1371/journal.pgen.1008073
-Moorthy_Becker_:
+Moorthy_Becker_2009:
   name: Moorthy_Becker_
-  doi: ~
   type: paper
   title: Pathophysiology of Kidney Disease and Hypertension
   authors:
@@ -219,5 +218,5 @@ Moorthy_Becker_:
   - Bryan Neil Becker
   - Frederick J Boehm III
   - Arjang Djamali
-  date: .na.character
+  date: 2009
   exurl: https://dx.doi.org/
