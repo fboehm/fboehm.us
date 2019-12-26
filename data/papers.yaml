@@ -210,13 +210,12 @@ Kemis_Linke_2019:
   date: '2019-08-29'
   exurl: https://dx.doi.org/10.1371/journal.pgen.1008073
 Moorthy_Becker_2009:
-  name: Moorthy_Becker_
-  type: paper
+  name: Moorthy_Becker_2009
+  type: book
   title: Pathophysiology of Kidney Disease and Hypertension
   authors:
   - A Vishnu Moorthy
   - Bryan Neil Becker
   - Frederick J Boehm III
   - Arjang Djamali
-  date: 2009
-  exurl: https://dx.doi.org/
+  date: '2009-01-01'
