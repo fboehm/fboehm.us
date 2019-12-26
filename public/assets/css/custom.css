@@ -1,3 +1,13 @@
+/* font colors*/
+
+.fa-angle-down, .fa, .fa-car, .fa-bus, .fa-li, .fa-scroll, .fa-fw, .fas, .fa-school, .fa-chalkboard-teacher, .fa-link, .fa-video, .fa-object-ungroup, .fa-r-project, .fa-award, .fa-hand-point-right {
+  color: blue;
+}
+
+
+
+
+
 /* =Typography
 -----------------------------------------------------------------------------*/
 .pointer {
