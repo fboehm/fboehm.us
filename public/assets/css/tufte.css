@@ -1,5 +1,6 @@
 body {
   counter-reset: sidenote-counter;
+  color: #2a52be;
 }
 
 .sidenote,
@@ -63,13 +64,13 @@ label.margin-toggle:not(.sidenote-number) {
 
   label.sidenote-number {
     display: inline;
-    color: #b24;
+    color: #2a52be;
   }
 
 
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
-    color: #b24;
+    color: #2a52be;
     font-style: normal;
   }
 
