@@ -1,10 +1,16 @@
 /* font colors*/
 
-.ai, .ai-orcid, .fa-ul, .fa-briefcase, .fa-envelope, .fa-angle-down, .fa, .fa-car, .fa-bus, .fa-li, .fa-scroll, .fa-fw, .fas, .fa-school, .fa-chalkboard-teacher, .fa-link, .fa-video, .fa-object-ungroup, .fa-r-project, .fa-award, .fa-hand-point-right, .fab, .fa-rss, .fa-heart {
+/*.ai, .ai-orcid, .fa-ul, .fa-briefcase, .fa-envelope, .fa-angle-down, .fa, .fa-car, .fa-bus, .fa-li, .fa-scroll, .fa-fw, .fas, .fa-school, .fa-chalkboard-teacher, .fa-link, .fa-video, .fa-object-ungroup, .fa-r-project, .fa-award, .fa-hand-point-right, .fab, .fa-rss, .fa-heart {
   color: blue;
+} */
+
+[class^="ai"] {
+  color: green;
 }
 
-
+[class^="fa"] {
+  color: green;
+}
 
 
 
