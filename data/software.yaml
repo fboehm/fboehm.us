@@ -5,14 +5,16 @@ gemma2:
   description: Multivariate random effects for systems genetics studies
   long_description: >
     `gemma2` uses restricted maximum likelihood methods to infer variance components in a multivariate linear mixed effects model for QTL mapping.
-  date: 2019-07-20
-  version: 0.1.0
+  date: 2019-10-01
+  version: 0.1.1
+  cran: https://cran.r-project.org/web/packages/gemma2/index.html
 qtl2pleio:
   name: qtl2pleio
   type: software
   github: https://github.com/fboehm/qtl2pleio
-  description: Performs a test of pleiotropy vs. separate QTL after Jiang & Zeng (1995)
+  cran: https://cran.r-project.org/web/packages/qtl2pleio/index.html
+  description: Testing pleiotropy vs. separate QTL after Jiang & Zeng (1995)
   long_description: >
     `qtl2pleio` performs a d-variate, d-QTL scan over a genomic region of interest before calculating a likelihood ratio test statistic for the competing hypotheses of pleiotropy and separate QTL.
-  date: 2019-08-28
-  version: 1.2.0
+  date: 2019-11-05
+  version: 1.2.3
