@@ -6,16 +6,16 @@ university_of_wisconsin_madison_2019:
   department: Statistics
   location: Madison, WI
   date: '2019-05-12'
-university_of_wisconsin_madison_2007:
-  name: university_of_wisconsin_madison_2007
+md:
+  name: md
   type: degree
   title: M.D.
   university: University of Wisconsin–Madison
-  department: .na
+  department: Medicine
   location: Madison, Wisconsin
   date: '2007-08-01'
-university_of_wisconsin_madison_2007:
-  name: university_of_wisconsin_madison_2007
+ms:
+  name: ms
   type: degree
   title: M.S.
   university: University of Wisconsin-Madison
