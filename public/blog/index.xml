@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
-    <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ImprovBoston Student Showcase video</title>
+      <link>/blog/improvboston-101-student-showcase-video/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>/blog/improvboston-101-student-showcase-video/</guid>
+      <description>I have now completed ImprovBoston’s Improv Comedy 101 class. I’m happy to share the video of my class’s show from December 2019. You can view it here.
+(Last modified: 2020-01-05 10:37:40)</description>
+    </item>
     
     <item>
       <title>World-wide Web and Social Media</title>
