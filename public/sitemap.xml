@@ -4,22 +4,47 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2020-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/computing/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/qtl2pleio-on-cran/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-package/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/entertainment/</loc>
-    <lastmod>2020-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-05T10:38:52-05:00</lastmod>
   </url>
   
   <url>
     <loc>/blog/improvboston-101-student-showcase-video/</loc>
-    <lastmod>2020-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-05T10:38:52-05:00</lastmod>
   </url>
   
   <url>
@@ -33,22 +58,7 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2019-08-30T14:30:34-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-package/</loc>
-    <lastmod>2019-08-30T14:30:34-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/r-package-site-incorporation-into-my-personal-website/</loc>
-    <lastmod>2019-08-30T14:30:34-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   

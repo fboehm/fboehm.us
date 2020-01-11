@@ -1,0 +1,54 @@
+---
+title: qtl2pleio on CRAN
+author: Frederick J. Boehm
+date: '2020-01-10'
+slug: qtl2pleio-on-cran
+categories:
+  - computing
+tags:
+  - R
+  - R package
+params:
+  lastmod: !r lubridate::now()
+---
+
+CRAN now hosts the packages `qtl2pleio` and `gemma2`. `qtl2pleio` performs a d-variate, d-QTL scan over a select genomic region. `gemma2` is used by `qtl2pleio` for the inference of multivariate variance components. 
+
+They can be installed with:
+
+```{r, eval = FALSE}
+install.packages("qtl2pleio")
+```
+
+The statistical model that `qtl2pleio` fits for each d-tuple of markers (or pseudomarkers) is 
+
+$$
+vec(Y) = Xvec(B) + vec(G) + vec(E)
+$$
+where $Y$ is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors. We assume that 
+
+$$
+G \sim N(0, K, V_g)
+$$
+
+and 
+
+$$
+E \sim N(0, I, V_e)
+$$
+
+We further assume that $V_g$ and $V_e$ are independent. $K$ is an estimated kinship matrix.
+
+In a [recent G3 article](https://www.g3journal.org/content/9/7/2317), we developed 
+our test of pleiotropy vs. separate QTL and applied it to two behavioral traits 
+measured on a cohort of Diversity Outbred mice.
+
+`qtl2pleio` "plays nicely" with [`qtl2`](https://kbroman.org/qtl2/) and other R packages from the `qtl2` ecosystem by using the same structures for genotype data, phenotype data, and covariates.
+
+We're currently investigating our pleiotropy test in the context of expression trait hotspots.
+
+
+
+
+
+(Last modified: `r params$lastmod`)

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on fboehm.us</title>
-    <link>/tags/r/</link>
-    <description>Recent content in R on fboehm.us</description>
+    <title>computing on fboehm.us</title>
+    <link>/categories/computing/</link>
+    <description>Recent content in computing on fboehm.us</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
     <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/computing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,15 +23,6 @@
 They can be installed with:
 install.packages(&amp;quot;qtl2pleio&amp;quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
 \[ vec(Y) = Xvec(B) + vec(G) + vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.</description>
-    </item>
-    
-    <item>
-      <title>R package site incorporation into my personal website</title>
-      <link>/blog/r-package-site-incorporation-into-my-personal-website/</link>
-      <pubDate>Sat, 24 Nov 2018 10:01:53 -0600</pubDate>
-      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>/blog/r-package-site-incorporation-into-my-personal-website/</guid>
-      <description>Overview I’ve been developing the R package qtl2pleio. It’s now at a stage where others can use it. I recently found the R package pkgdown, which allows developers to build, in an automated fashion, websites for their packages. I posted an entry on pkgdown earlier this year. I now wish to communicate my strategy for incorporating the package site into my personal website, https://fboehm.us. I write this primarily as a reminder to myself.</description>
     </item>
     
   </channel>
