@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +9,8 @@
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs</title>
-  <link rel="canonical" href="/blog/" />
+  <title>qtl2pleio on CRAN</title>
+  <link rel="canonical" href="/blog/qtl2pleio-on-cran/" />
 
   
   <link rel="stylesheet" href="/assets/css/kube.css" />
@@ -38,20 +40,25 @@
   <meta name="theme-color" content="#ffffff">
 
   
-  <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="fboehm.us" />
   
 
   
-  <meta name="description" content="
+  <meta name="description" content="CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
+They can be installed with:
+install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
+\[ vec(Y) = Xvec(B) &#43; vec(G) &#43; vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.
 " />
 
-  <meta property="og:title" content="Blogs" />
+  <meta property="og:title" content="qtl2pleio on CRAN" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Frederick Boehm's website" />
-  <meta property="og:description" content="  " />
-  <meta property="og:url" content="/blog/" />
+  <meta property="og:description" content="  CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
+They can be installed with:
+install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
+\[ vec(Y) = Xvec(B) &#43; vec(G) &#43; vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors." />
+  <meta property="og:url" content="/blog/qtl2pleio-on-cran/" />
   <script type="application/ld+json">
-    {"@type":"WebSite","url":"\/blog\/","headline":"Blogs", "name":"Frederick Boehm's website","description":"","@context":"http://schema.org"}
+    {"@type":"WebSite","url":"\/blog\/qtl2pleio-on-cran\/","headline":"qtl2pleio on CRAN", "name":"Frederick Boehm's website","description":"CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.\nThey can be installed with:\ninstall.packages(\x26quot;qtl2pleio\x26quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is\n\\[ vec(Y) = Xvec(B) \x2b vec(G) \x2b vec(E) \\] where \\(Y\\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.","@context":"http://schema.org"}
   </script>
 
   
@@ -59,7 +66,8 @@
 </head>
 
 <body>
-  <div id="topbar" class="is-hidden-print">
+
+<div id="topbar" class="is-hidden-print">
 	<div class="wrapper">
 		<header>
 			<div class="is-navbar-container">
@@ -106,151 +114,62 @@
 	</div>
 </div>
 
-  <div class="wrapper">
-    <div class="is-row is-stack-20">
-      <div class="is-col is-60">
-        <h1 class="is-text-center">Blog</h1>
-        <div class="is-large is-text-center">
+
+<div class="wrapper">
+  <div class="is-row is-stack-20">
+    <div class="is-col is-10">&nbsp;</div>
+    <div class="is-col is-60">
+    <h1 class="is-text-center"><a href="">qtl2pleio on CRAN</a></h1>
+    <h4 class="is-bigger is-text-center">January 10, 2020</h4>
+    </div>
+    <div class="is-col is-30">&nbsp;</div>
+  </div>
+  <div class="is-row is-stack-20">
+  </div>
+  <div class="is-row is-stack-20">
+    <div class="is-col is-10 is-stack-20">
+    </div>
+    <div class="is-col is-60">
+      <div class="story">
+      
 
 
-<nav class="pagination" role="pagination">
-  
-  <span class="pointer">2</span>
-  
-  <span>&nbsp;1 / 3&nbsp;</span>
-  
-  <a href="/blog/page/2/"><span class="pointer">1</span></a>
-  
-</nav>
+<p>CRAN now hosts the packages <code>qtl2pleio</code> and <code>gemma2</code>. <code>qtl2pleio</code> performs a d-variate, d-QTL scan over a select genomic region. <code>gemma2</code> is used by <code>qtl2pleio</code> for the inference of multivariate variance components.</p>
+<p>They can be installed with:</p>
+<pre class="r"><code>install.packages(&quot;qtl2pleio&quot;)</code></pre>
+<p>The statistical model that <code>qtl2pleio</code> fits for each d-tuple of markers (or pseudomarkers) is</p>
+<p><span class="math display">\[
+vec(Y) = Xvec(B) + vec(G) + vec(E)
+\]</span>
+where <span class="math inline">\(Y\)</span> is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors. We assume that</p>
+<p><span class="math display">\[
+G \sim N(0, K, V_g)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+E \sim N(0, I, V_e)
+\]</span></p>
+<p>We further assume that <span class="math inline">\(V_g\)</span> and <span class="math inline">\(V_e\)</span> are independent. <span class="math inline">\(K\)</span> is an estimated kinship matrix.</p>
+<p>In a <a href="https://www.g3journal.org/content/9/7/2317">recent G3 article</a>, we developed
+our test of pleiotropy vs. separate QTL and applied it to two behavioral traits
+measured on a cohort of Diversity Outbred mice.</p>
+<p><code>qtl2pleio</code> “plays nicely” with <a href="https://kbroman.org/qtl2/"><code>qtl2</code></a> and other R packages from the <code>qtl2</code> ecosystem by using the same structures for genotype data, phenotype data, and covariates.</p>
+<p>We’re currently investigating our pleiotropy test in the context of expression trait hotspots.</p>
+<p>(Last modified: 2020-01-11 14:21:28)</p>
 
+      </div>
+      <hr>
+      
+      <a href="/blog/improvboston-101-student-showcase-video/"><span class="pointer">2</span>&nbsp;ImprovBoston Student Showcase video</a> |
+      
+      <a href="/blog">All posts</a>
+      
+    </div>
+    <div class="is-col is-30"></div>
+
+  </div>
 </div>
-      </div>
-    </div>
-    
-    
-    <div class="is-row">
-      <div class="is-col is-20  is-stack-20 dateblock">&nbsp</div>
-      <div class="is-col is-60 is-stack-20">
-        <h2><a href="/blog/qtl2pleio-on-cran/">qtl2pleio on CRAN</a></h2>
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    <div class="is-row">
-      <div class="is-col is-20 is-stack-20 dateblock">
-          <h4>10 January 2020</h4>
-      </div>
-      <div class="is-col is-60 summary">
-        
-        CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
-They can be installed with:
-install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
-\[ vec(Y) = Xvec(B) + vec(G) + vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.
-        <p class="is-text-right is-text-center-mobile"><a href="/blog/qtl2pleio-on-cran/">Read More…</a></p>
-        
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    
-    <div class="is-row">
-      <div class="is-col is-20  is-stack-20 dateblock">&nbsp</div>
-      <div class="is-col is-60 is-stack-20">
-        <h2><a href="/blog/improvboston-101-student-showcase-video/">ImprovBoston Student Showcase video</a></h2>
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    <div class="is-row">
-      <div class="is-col is-20 is-stack-20 dateblock">
-          <h4>5 January 2020</h4>
-      </div>
-      <div class="is-col is-60 summary">
-        
-        
 
-
-<p>I have now completed <a href="https://improvboston.com/">ImprovBoston’s Improv Comedy 101 class</a>. I’m happy to share the video of my class’s show from December 2019. You can view it <a href="https://venue.streamspot.com/video/0071b62456">here</a>.</p>
-<p>(Last modified: 2020-01-11 14:35:36)</p>
-
-        
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    
-    <div class="is-row">
-      <div class="is-col is-20  is-stack-20 dateblock">&nbsp</div>
-      <div class="is-col is-60 is-stack-20">
-        <h2><a href="/blog/internet-social-media/">World-wide Web and Social Media</a></h2>
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    <div class="is-row">
-      <div class="is-col is-20 is-stack-20 dateblock">
-          <h4>22 December 2018</h4>
-      </div>
-      <div class="is-col is-60 summary">
-        
-        I’ve followed a series of blog posts from Cal Newport at http://calnewport.com/blog/ (with posts like this) in which Newport criticizes social media platforms for, among other things, limiting the scope of internet browsing. Newport, a computer science professor and writer, proudly has never had a social media account.
-Until March 2018, I regularly consumed information from Facebook, Twitter, and even Instagram and Linkedin. Termination of these accounts aligned with my larger professional and scholarly goals of wanting to focus more on my studies and other, engaging, activities.
-        <p class="is-text-right is-text-center-mobile"><a href="/blog/internet-social-media/">Read More…</a></p>
-        
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    
-    <div class="is-row">
-      <div class="is-col is-20  is-stack-20 dateblock">&nbsp</div>
-      <div class="is-col is-60 is-stack-20">
-        <h2><a href="/blog/r-package-site-incorporation-into-my-personal-website/">R package site incorporation into my personal website</a></h2>
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    <div class="is-row">
-      <div class="is-col is-20 is-stack-20 dateblock">
-          <h4>24 November 2018</h4>
-      </div>
-      <div class="is-col is-60 summary">
-        
-        Overview I’ve been developing the R package qtl2pleio. It’s now at a stage where others can use it. I recently found the R package pkgdown, which allows developers to build, in an automated fashion, websites for their packages. I posted an entry on pkgdown earlier this year. I now wish to communicate my strategy for incorporating the package site into my personal website, https://fboehm.us. I write this primarily as a reminder to myself.
-        <p class="is-text-right is-text-center-mobile"><a href="/blog/r-package-site-incorporation-into-my-personal-website/">Read More…</a></p>
-        
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    
-    <div class="is-row">
-      <div class="is-col is-20  is-stack-20 dateblock">&nbsp</div>
-      <div class="is-col is-60 is-stack-20">
-        <h2><a href="/blog/reticulate-r-package-travis/">reticulate R package &amp; Travis</a></h2>
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    <div class="is-row">
-      <div class="is-col is-20 is-stack-20 dateblock">
-          <h4>1 April 2018</h4>
-      </div>
-      <div class="is-col is-60 summary">
-        
-        I like to use Travis CI with my R packages. I recently wrote a R package, limmbo2, that is a wrapper for the python module limmbo. I used the R package reticulate, from Rstudio. I struggled for about 3 hours to write a .travis.yml file for limmbo2. Finally, I found a viable solution. I’m writing this blog post in hopes that it might be useful to myself and others in the future.
-        <p class="is-text-right is-text-center-mobile"><a href="/blog/reticulate-r-package-travis/">Read More…</a></p>
-        
-      </div>
-      <div class="is-col is-20">&nbsp</div>
-    </div>
-    
-    <div class="is-large is-text-center">
-
-
-<nav class="pagination" role="pagination">
-  
-  <span class="pointer">2</span>
-  
-  <span>&nbsp;1 / 3&nbsp;</span>
-  
-  <a href="/blog/page/2/"><span class="pointer">1</span></a>
-  
-</nav>
-
-</div>
-</div>
 
 
 
@@ -316,6 +235,7 @@ if (!doNotTrack) {
 <script>
   $K.dom(window).on('load', $K.init);
 </script>
+
 
 </body>
 </html>
