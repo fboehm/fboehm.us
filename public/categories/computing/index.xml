@@ -37,13 +37,13 @@ G \sim N(0, K, V_g)
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 E \sim N(0, I, V_e)
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We further assume that &lt;span class=&#34;math inline&#34;&gt;\(V_g\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(V_e\)&lt;/span&gt; are independent. &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; is an estimated kinship matrix.&lt;/p&gt;
+&lt;p&gt;We further assume that &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; are independent. &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; is an estimated kinship matrix.&lt;/p&gt;
 &lt;p&gt;In a &lt;a href=&#34;https://www.g3journal.org/content/9/7/2317&#34;&gt;recent G3 article&lt;/a&gt;, we developed
 our test of pleiotropy vs. separate QTL and applied it to two behavioral traits
 measured on a cohort of Diversity Outbred mice.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;qtl2pleio&lt;/code&gt; “plays nicely” with &lt;a href=&#34;https://kbroman.org/qtl2/&#34;&gt;&lt;code&gt;qtl2&lt;/code&gt;&lt;/a&gt; and other R packages from the &lt;code&gt;qtl2&lt;/code&gt; ecosystem by using the same structures for genotype data, phenotype data, and covariates.&lt;/p&gt;
 &lt;p&gt;We’re currently investigating our pleiotropy test in the context of expression trait hotspots.&lt;/p&gt;
-&lt;p&gt;(Last modified: 2020-01-11 14:21:28)&lt;/p&gt;
+&lt;p&gt;(Last modified: 2020-01-12 13:51:26)&lt;/p&gt;
 </description>
     </item>
     

@@ -37,7 +37,7 @@ $$
 E \sim N(0, I, V_e)
 $$
 
-We further assume that $V_g$ and $V_e$ are independent. $K$ is an estimated kinship matrix.
+We further assume that $G$ and $E$ are independent. $K$ is an estimated kinship matrix.
 
 In a [recent G3 article](https://www.g3journal.org/content/9/7/2317), we developed 
 our test of pleiotropy vs. separate QTL and applied it to two behavioral traits 
