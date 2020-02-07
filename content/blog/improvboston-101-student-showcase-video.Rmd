@@ -10,6 +10,6 @@ categories:
 tags: []
 ---
 
-I have now completed [ImprovBoston's Improv Comedy 101 class](https://improvboston.com/). I'm happy to share the video of my class's show from December 2019. You can view it [here](https://venue.streamspot.com/video/0071b62456). 
+I have now completed [ImprovBoston's Improv Comedy 101 class](https://improvboston.com/). I'm happy to share the video of my class's show from December 2019. You can view it [here](https://venue.streamspot.com/video/9d08388766). 
 
 (Last modified: `r params$lastmod`)
