@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R package on fboehm.us</title>
-    <link>https://fboehm.us/tags/r-package/</link>
+    <link>/tags/r-package/</link>
     <description>Recent content in R package on fboehm.us</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
     <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fboehm.us/tags/r-package/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r-package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>qtl2pleio on CRAN</title>
-      <link>https://fboehm.us/blog/qtl2pleio-on-cran/</link>
+      <link>/blog/qtl2pleio-on-cran/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>https://fboehm.us/blog/qtl2pleio-on-cran/</guid>
+      <guid>/blog/qtl2pleio-on-cran/</guid>
       <description>CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
 They can be installed with:
 install.packages(&amp;quot;qtl2pleio&amp;quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
@@ -27,10 +27,10 @@ install.packages(&amp;quot;qtl2pleio&amp;quot;) The statistical model that qtl2p
     
     <item>
       <title>R package site incorporation into my personal website</title>
-      <link>https://fboehm.us/blog/r-package-site-incorporation-into-my-personal-website/</link>
+      <link>/blog/r-package-site-incorporation-into-my-personal-website/</link>
       <pubDate>Sat, 24 Nov 2018 10:01:53 -0600</pubDate>
       <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>https://fboehm.us/blog/r-package-site-incorporation-into-my-personal-website/</guid>
+      <guid>/blog/r-package-site-incorporation-into-my-personal-website/</guid>
       <description>Overview I’ve been developing the R package qtl2pleio. It’s now at a stage where others can use it. I recently found the R package pkgdown, which allows developers to build, in an automated fashion, websites for their packages. I posted an entry on pkgdown earlier this year. I now wish to communicate my strategy for incorporating the package site into my personal website, https://fboehm.us. I write this primarily as a reminder to myself.</description>
     </item>
     
