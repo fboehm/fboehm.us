@@ -6,8 +6,8 @@ params:
   lastmod: !r lubridate::now()
 slug: improvboston-101-student-showcase-video
 categories:
-  - entertainment?
-tags: []
+  - entertainment
+tags: [improv comedy]
 ---
 
 I have now completed [ImprovBoston's Improv Comedy 101 class](https://improvboston.com/). I'm happy to share the video of my class's show from December 2019. You can view it [here](https://venue.streamspot.com/video/9d08388766). 
