@@ -3,107 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/blog/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/categories/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/computing/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/categories/computing/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/qtl2pleio-on-cran/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/blog/qtl2pleio-on-cran/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/tags/r/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r-package/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/tags/r-package/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
+    <loc>https://fboehm.us/tags/</loc>
+    <lastmod>2020-01-12T13:52:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/entertainment/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/improvboston-101-student-showcase-video/</loc>
-    <lastmod>2020-01-11T15:12:15-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/internet-social-media/</loc>
+    <loc>https://fboehm.us/blog/internet-social-media/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/pkgdown/</loc>
+    <loc>https://fboehm.us/tags/pkgdown/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/r-package-site-incorporation-into-my-personal-website/</loc>
+    <loc>https://fboehm.us/blog/r-package-site-incorporation-into-my-personal-website/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/reticulate-r-package-travis/</loc>
+    <loc>https://fboehm.us/blog/reticulate-r-package-travis/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/limmbo2-r-package-now-on-github/</loc>
+    <loc>https://fboehm.us/blog/limmbo2-r-package-now-on-github/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/joan-didions-on-self-respect/</loc>
+    <loc>https://fboehm.us/blog/joan-didions-on-self-respect/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/pkgdown-r-package-for-generating-package-websites-on-github/</loc>
+    <loc>https://fboehm.us/blog/pkgdown-r-package-for-generating-package-websites-on-github/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/mathematical-writing-by-donald-knuth-tracy-larrabee-and-paul-roberts/</loc>
+    <loc>https://fboehm.us/blog/mathematical-writing-by-donald-knuth-tracy-larrabee-and-paul-roberts/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/john-robertss-commencement-address/</loc>
+    <loc>https://fboehm.us/blog/john-robertss-commencement-address/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/getting-started-with-blogdown/</loc>
+    <loc>https://fboehm.us/blog/getting-started-with-blogdown/</loc>
     <lastmod>2019-08-30T14:30:34-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://fboehm.us/</loc>
     <lastmod>2019-10-30T21:36:04-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/vitae/</loc>
+    <loc>https://fboehm.us/blog/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fboehm.us/vitae/</loc>
     <lastmod>2019-08-30T10:04:08-04:00</lastmod>
   </url>
   

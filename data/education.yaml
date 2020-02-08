@@ -4,7 +4,7 @@ university_of_wisconsin_madison_2019:
   title: Ph.D.
   university: University of Wisconsin Madison
   department: Statistics
-  location: Madison, WI
+  location: Madison, Wisconsin
   date: '2019-05-12'
 md:
   name: md
@@ -20,7 +20,7 @@ ms:
   title: M.S.
   university: University of Wisconsin-Madison
   department: Population health sciences
-  location: Madison, WI
+  location: Madison, Wisconsin
   date: '2007-08-01'
 university_of_wisconsin_madison_2001:
   name: university_of_wisconsin_madison_2001
@@ -28,5 +28,5 @@ university_of_wisconsin_madison_2001:
   title: B.S.
   university: University of Wisconsin-Madison
   department: Chemistry
-  location: Madison, WI
+  location: Madison, Wisconsin
   date: '2001-05-01'
