@@ -3,6 +3,7 @@ I forked Noam Ross's repository and tried to make a Hugo theme from it. The them
 
 To alter appearance of CV, consider editing `work.html` within the noamross theme: https://github.com/fboehm/noamross/blob/master/layouts/partials/work.html
 
+When serving site with blogdown::serve_site(), how do I add arguments to call to hugo? Maybe write my own function that modifies serve_site()? I would like to add enableGitInfo option to Hugo calls.
 
 
 
