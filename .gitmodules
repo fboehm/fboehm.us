@@ -4,3 +4,6 @@
 [submodule "static/notebook"]
 	path = static/notebook
 	url = https://github.com/fboehm/notebook
+[submodule "public/notebook"]
+	path = public/notebook
+	url = https://github.com/fboehm/notebook
