@@ -1,4 +1,0 @@
-bookdown::tufte_html_book:
-  toc: no
-bookdown::tufte_book2:
-  toc: no
