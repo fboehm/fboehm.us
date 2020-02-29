@@ -2,5 +2,5 @@
 	path = themes/noamross
 	url = https://github.com/fboehm/noamross
 [submodule "notebook"]
-	path = notebook
+	path = static/notebook
 	url = https://github.com/fboehm/notebook.git
