@@ -3,4 +3,4 @@
 	url = https://github.com/fboehm/noamross
 [submodule "static/notebook"]
 	path = static/notebook
-	url = https://github.com/fboehm/notebook.git
+	url = https://github.com/fboehm/notebook
