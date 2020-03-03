@@ -8,7 +8,6 @@ When serving site with blogdown::serve_site(), how do I add arguments to call to
 
 
 
-
 Below is Noam Ross's README for his repository noamross.net:
 
 # noamross.net
