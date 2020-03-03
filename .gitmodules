@@ -1,9 +1,3 @@
 [submodule "themes/noamross"]
 	path = themes/noamross
 	url = https://github.com/fboehm/noamross
-[submodule "static/notebook"]
-	path = static/notebook
-	url = https://github.com/fboehm/notebook
-[submodule "public/notebook"]
-	path = public/notebook
-	url = https://github.com/fboehm/notebook
