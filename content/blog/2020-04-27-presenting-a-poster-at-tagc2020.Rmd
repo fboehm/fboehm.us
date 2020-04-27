@@ -10,6 +10,8 @@ params:
   lastmod: !r lubridate::now()
 ---
 
+
+
 I have the opportunity to present a [poster](https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350) at The Allied Genetics 
 Conference (TAGC) 2020. I've posted both a pdf of the poster and a 
 mp4 narrated video tour of the poster 
