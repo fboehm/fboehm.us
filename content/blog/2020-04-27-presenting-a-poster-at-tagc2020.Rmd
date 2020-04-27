@@ -1,0 +1,21 @@
+---
+title: Presenting a poster at TAGC2020
+author: Fred Boehm
+date: '2020-04-27'
+slug: presenting-a-poster-at-tagc2020
+categories:
+  - research
+tags: [genetics]
+params:
+  lastmod: !r lubridate::now()
+---
+
+I have the opportunity to present a [poster](https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350) at The Allied Genetics 
+Conference (TAGC) 2020. I've posted both a pdf of the poster and a 
+mp4 narrated video tour of the poster 
+[here](https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350). 
+
+I'd love to address your questions and hear your suggestions in the Q & A session on **Thursday, April 30, at 1:30pm Eastern Time**. 
+My poster number is **1333A**.
+
+(Last modified: `r params$lastmod`)

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fboehm.us: research posts  </title>
+    <link>/categories/research/</link>
+    <description>Frederick Boehm&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
+    <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Presenting a poster at TAGC2020</title>
+      <link>/blog/presenting-a-poster-at-tagc2020/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>/blog/presenting-a-poster-at-tagc2020/</guid>
+      <description>
+
+
+&lt;p&gt;I have the opportunity to present a &lt;a href=&#34;https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350&#34;&gt;poster&lt;/a&gt; at The Allied Genetics
+Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a
+mp4 narrated video tour of the poster
+&lt;a href=&#34;https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I’d love to address your questions and hear your suggestions in the Q &amp;amp; A session on &lt;strong&gt;Thursday, April 30, at 1:30pm Eastern Time&lt;/strong&gt;.
+My poster number is &lt;strong&gt;1333A&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;(Last modified: lubridate::now())&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

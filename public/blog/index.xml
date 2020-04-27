@@ -8,10 +8,21 @@
     <language>en-us</language>
     <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Presenting a poster at TAGC2020</title>
+      <link>/blog/presenting-a-poster-at-tagc2020/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>/blog/presenting-a-poster-at-tagc2020/</guid>
+      <description>I have the opportunity to present a poster at The Allied Genetics Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a mp4 narrated video tour of the poster here.
+I’d love to address your questions and hear your suggestions in the Q &amp;amp; A session on Thursday, April 30, at 1:30pm Eastern Time. My poster number is 1333A.
+(Last modified: lubridate::now())</description>
+    </item>
     
     <item>
       <title>qtl2pleio on CRAN</title>

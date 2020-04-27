@@ -9,8 +9,8 @@
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qtl2pleio on CRAN</title>
-  <link rel="canonical" href="/blog/qtl2pleio-on-cran/" />
+  <title>Presenting a poster at TAGC2020</title>
+  <link rel="canonical" href="/blog/presenting-a-poster-at-tagc2020/" />
 
   
   <link rel="stylesheet" href="/assets/css/kube.css" />
@@ -43,22 +43,20 @@
   
 
   
-  <meta name="description" content="CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
-They can be installed with:
-install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
-\[ vec(Y) = Xvec(B) &#43; vec(G) &#43; vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.
+  <meta name="description" content="I have the opportunity to present a poster at The Allied Genetics Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a mp4 narrated video tour of the poster here.
+I’d love to address your questions and hear your suggestions in the Q &amp; A session on Thursday, April 30, at 1:30pm Eastern Time. My poster number is 1333A.
+(Last modified: lubridate::now())
 " />
 
-  <meta property="og:title" content="qtl2pleio on CRAN" />
+  <meta property="og:title" content="Presenting a poster at TAGC2020" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Frederick Boehm's website" />
-  <meta property="og:description" content="  CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.
-They can be installed with:
-install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is
-\[ vec(Y) = Xvec(B) &#43; vec(G) &#43; vec(E) \] where \(Y\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors." />
-  <meta property="og:url" content="/blog/qtl2pleio-on-cran/" />
+  <meta property="og:description" content="  I have the opportunity to present a poster at The Allied Genetics Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a mp4 narrated video tour of the poster here.
+I’d love to address your questions and hear your suggestions in the Q &amp; A session on Thursday, April 30, at 1:30pm Eastern Time. My poster number is 1333A.
+(Last modified: lubridate::now())" />
+  <meta property="og:url" content="/blog/presenting-a-poster-at-tagc2020/" />
   <script type="application/ld+json">
-    {"@type":"WebSite","url":"\/blog\/qtl2pleio-on-cran\/","headline":"qtl2pleio on CRAN", "name":"Frederick Boehm's website","description":"CRAN now hosts the packages qtl2pleio and gemma2. qtl2pleio performs a d-variate, d-QTL scan over a select genomic region. gemma2 is used by qtl2pleio for the inference of multivariate variance components.\nThey can be installed with:\ninstall.packages(\x26quot;qtl2pleio\x26quot;) The statistical model that qtl2pleio fits for each d-tuple of markers (or pseudomarkers) is\n\\[ vec(Y) = Xvec(B) \x2b vec(G) \x2b vec(E) \\] where \\(Y\\) is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors.","@context":"http://schema.org"}
+    {"@type":"WebSite","url":"\/blog\/presenting-a-poster-at-tagc2020\/","headline":"Presenting a poster at TAGC2020", "name":"Frederick Boehm's website","description":"I have the opportunity to present a poster at The Allied Genetics Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a mp4 narrated video tour of the poster here.\nI’d love to address your questions and hear your suggestions in the Q \x26amp; A session on Thursday, April 30, at 1:30pm Eastern Time. My poster number is 1333A.\n(Last modified: lubridate::now())","@context":"http://schema.org"}
   </script>
 
   
@@ -120,8 +118,8 @@ install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fit
   <div class="is-row is-stack-20">
     <div class="is-col is-10">&nbsp;</div>
     <div class="is-col is-60">
-    <h1 class="is-text-center"><a href="">qtl2pleio on CRAN</a></h1>
-    <h4 class="is-bigger is-text-center">January 10, 2020</h4>
+    <h1 class="is-text-center"><a href="">Presenting a poster at TAGC2020</a></h1>
+    <h4 class="is-bigger is-text-center">April 27, 2020</h4>
     </div>
     <div class="is-col is-30">&nbsp;</div>
   </div>
@@ -135,37 +133,20 @@ install.packages(&quot;qtl2pleio&quot;) The statistical model that qtl2pleio fit
       
 
 
-<p>CRAN now hosts the packages <code>qtl2pleio</code> and <code>gemma2</code>. <code>qtl2pleio</code> performs a d-variate, d-QTL scan over a select genomic region. <code>gemma2</code> is used by <code>qtl2pleio</code> for the inference of multivariate variance components.</p>
-<p>They can be installed with:</p>
-<pre class="r"><code>install.packages(&quot;qtl2pleio&quot;)</code></pre>
-<p>The statistical model that <code>qtl2pleio</code> fits for each d-tuple of markers (or pseudomarkers) is</p>
-<p><span class="math display">\[
-vec(Y) = Xvec(B) + vec(G) + vec(E)
-\]</span>
-where <span class="math inline">\(Y\)</span> is a n by d matrix of d traits (for each of n subjects), X is a dn by df block-diagonal matrix of founder allele probabilities, B is a f by d matrix of allele effects for each of d traits, G is a n by d matrix of polygenic random effects, and E is a n by d matrix of random errors. We assume that</p>
-<p><span class="math display">\[
-G \sim N(0, K, V_g)
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-E \sim N(0, I, V_e)
-\]</span></p>
-<p>We further assume that <span class="math inline">\(G\)</span> and <span class="math inline">\(E\)</span> are independent. <span class="math inline">\(K\)</span> is an estimated kinship matrix.</p>
-<p>In a <a href="https://www.g3journal.org/content/9/7/2317">recent G3 article</a>, we developed
-our test of pleiotropy vs. separate QTL and applied it to two behavioral traits
-measured on a cohort of Diversity Outbred mice.</p>
-<p><code>qtl2pleio</code> “plays nicely” with <a href="https://kbroman.org/qtl2/"><code>qtl2</code></a> and other R packages from the <code>qtl2</code> ecosystem by using the same structures for genotype data, phenotype data, and covariates.</p>
-<p>We’re currently investigating our pleiotropy test in the context of expression trait hotspots.</p>
-<p>(Last modified: 2020-01-12 13:51:26)</p>
+<p>I have the opportunity to present a <a href="https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350">poster</a> at The Allied Genetics
+Conference (TAGC) 2020. I’ve posted both a pdf of the poster and a
+mp4 narrated video tour of the poster
+<a href="https://tagc2020.figshare.com/articles/Enhancing_QTL_detection_power_in_multiparental_populations/12142350">here</a>.</p>
+<p>I’d love to address your questions and hear your suggestions in the Q &amp; A session on <strong>Thursday, April 30, at 1:30pm Eastern Time</strong>.
+My poster number is <strong>1333A</strong>.</p>
+<p>(Last modified: lubridate::now())</p>
 
       </div>
       <hr>
       
-      <a href="/blog/improvboston-101-student-showcase-video/"><span class="pointer">2</span>&nbsp;ImprovBoston Student Showcase video</a> |
+      <a href="/blog/qtl2pleio-on-cran/"><span class="pointer">2</span>&nbsp;qtl2pleio on CRAN</a> |
       
       <a href="/blog">All posts</a>
-      
-      | <a href="/blog/presenting-a-poster-at-tagc2020/">Presenting a poster at TAGC2020&nbsp;<span class="pointer">1</span></a>
       
     </div>
     <div class="is-col is-30"></div>
