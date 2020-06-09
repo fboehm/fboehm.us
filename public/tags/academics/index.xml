@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>academics on fboehm.us</title>
+    <link>/tags/academics/</link>
+    <description>Recent content in academics on fboehm.us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
+    <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/academics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#ShutDownAcademia #ShutDownSTEM</title>
+      <link>/blog/shutdownacademia-shutdownstem/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>/blog/shutdownacademia-shutdownstem/</guid>
+      <description>Tomorrow my lab will participate in #ShutDownAcademia #ShutDownSTEM. I’ll stay at home instead of traveling to my office. And instead of doing my usual research, I’ll read, watch, and listen to pieces listed on the organizers’ website: https://www.shutdownstem.com/.
+I hope that you’ll join me in participating.</description>
+    </item>
+    
+  </channel>
+</rss>

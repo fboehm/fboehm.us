@@ -3,13 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/shutdownacademia-shutdownstem/</loc>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/academics/</loc>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
-    <lastmod>2020-04-27T15:49:46-04:00</lastmod>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-04-27T15:49:46-04:00</lastmod>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/research/</loc>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -19,16 +39,6 @@
   
   <url>
     <loc>/blog/presenting-a-poster-at-tagc2020/</loc>
-    <lastmod>2020-04-27T15:49:46-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/research/</loc>
-    <lastmod>2020-04-27T15:49:46-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-04-27T15:49:46-04:00</lastmod>
   </url>
   
