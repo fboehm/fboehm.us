@@ -45,16 +45,16 @@
   
 
   
-  <meta name="description" content="Welcome to my website! I&#39;m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL). In other words, we identify where in the genome are genes that affect a given complex trait.
+  <meta name="description" content="Welcome to my website! I&#39;m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL) with the goal of identifying gene regions that affect complex traits.
 " />
 
   <meta property="og:title" content="" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Frederick Boehm's website" />
-  <meta property="og:description" content="  Welcome to my website! I&#39;m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL). In other words, we identify where in the genome are genes that affect a given complex trait." />
+  <meta property="og:description" content="  Welcome to my website! I&#39;m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL) with the goal of identifying gene regions that affect complex traits." />
   <meta property="og:url" content="/" />
   <script type="application/ld+json">
-    {"@type":"WebSite","url":"\/","headline":"", "name":"Frederick Boehm's website","description":"Welcome to my website! I\x27m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL). In other words, we identify where in the genome are genes that affect a given complex trait.","@context":"http://schema.org"}
+    {"@type":"WebSite","url":"\/","headline":"", "name":"Frederick Boehm's website","description":"Welcome to my website! I\x27m a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL) with the goal of identifying gene regions that affect complex traits.","@context":"http://schema.org"}
   </script>
 
   
@@ -81,7 +81,7 @@
 							<li><a href="/blog">Blog</a></li>
 						
 							<li><a href="/vitae">Vitae</a></li>
-							<li><a href="/software">Software</a></li>
+							<li><a href="/software/qtl2pleio">Software</a></li>
 							<li><a href="/notebook/_book">Notebook</a></li>
 							<li><a href="#connect">Connect</a></li>
 						</ul>
@@ -115,7 +115,22 @@
     <div class="is-row is-stack-40">
       <div class="is-col is-100 story is-big">
         <img class="header-img is-stack-20" src="/assets/img/header-pic.jpg">
-        <p>Welcome to my website!  I'm a postdoctoral researcher and biostatistician at the University of Massachusetts Medical School. My research is in statistical methods for systems genetics. My colleagues and I use mice to study biology of complex traits, like body weight, that are affected by many genes and other factors. We design and perform experiments to map quantitative trait loci (QTL). In other words, we identify where in the genome are genes that affect a given complex trait.</p>
+        <p>Welcome to my website!  I'm a postdoctoral researcher and biostatistician at the University of
+Massachusetts Medical School. My research is in statistical methods for systems genetics. My
+colleagues and I use mice to study biology of complex traits, like body weight, that are
+affected by many genes and other factors. We design and perform experiments to map quantitative
+trait loci (QTL) with the goal of identifying gene regions that affect
+complex traits. I also maintain R packages that enable multivariate analysis in systems
+genetics studies.</p>
+<p>I maintain two R packages, <a href="qtl2pleio">qtl2pleio</a> and <a href="https://cran.r-project.org/web/packages/gemma2/index.html">gemma2</a>. Both packages are on CRAN. You can install them with</p>
+<pre><code class="language-{r," data-lang="{r,">install.packages(c(&quot;gemma2&quot;, &quot;qtl2pleio&quot;))
+</code></pre><p><code>gemma2</code> implements GEMMA's expectation-maximization algorithm for multivariate random
+effects. It doesn't intend to implement all features of GEMMA. Instead, it is a minor
+utility package that <code>qtl2pleio</code> requires.</p>
+<p><code>qtl2pleio</code> is part of the <a href="https://kbroman.org/qtl2/"><code>qtl2</code></a> ecosystem of R packages
+for analysis of systems genetics studies. <code>qtl2pleio</code> performs a multivariate, multi-QTL
+scan of a chromosome region and tests for presence of multiple QTL. More details and
+vignettes are found on <a href="qtl2pleio">its <code>pkgdown</code> site</a></p>
 
       </div>
     </div>
