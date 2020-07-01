@@ -55,6 +55,16 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46757486-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-46757486-5');
+</script>
+
 
   </head>
 
@@ -234,7 +244,7 @@ Genet. Res. 71: 171–180.</p>
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>probs</span>) <span class='kw'>&lt;-</span> <span class='no'>LETTERS</span>[<span class='fl'>1</span>:<span class='fl'>2</span>]
 <span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span>(<span class='no'>probs</span>)<span class='kw'>[[</span><span class='fl'>3</span>]] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"m"</span>, <span class='fl'>1</span>:<span class='fl'>5</span>)
 <span class='fu'>boot_pvl</span>(<span class='kw'>probs</span> <span class='kw'>=</span> <span class='no'>probs</span>, <span class='kw'>pheno</span> <span class='kw'>=</span> <span class='no'>pheno</span>,
-        <span class='kw'>start_snp</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_snp</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>pleio_peak_index</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>nboot</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: [ONE-TIME WARNING] Forked processing ('multicore') is disabled in future (&gt;= 1.13.0) when running R from RStudio, because it is considered unstable. Because of this, plan("multicore") will fall back to plan("sequential"), and plan("multiprocess") will fall back to plan("multisession") - not plan("multicore") as in the past. For more details, how to control forked processing or not, and how to silence this warning in future R sessions, see ?future::supportsMulticore</span></div><div class='output co'>#&gt; <span class='warning'>Warning: [ONE-TIME WARNING] Forked processing ('multicore') is disabled in future (&gt;= 1.13.0) when running R from RStudio, because it is considered unstable. Because of this, plan("multicore") will fall back to plan("sequential"), and plan("multiprocess") will fall back to plan("multisession") - not plan("multicore") as in the past. For more details, how to control forked processing or not, and how to silence this warning in future R sessions, see ?future::supportsMulticore</span></div><div class='output co'>#&gt; [1] 0.2200318</div><div class='input'>
+        <span class='kw'>start_snp</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_snp</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>pleio_peak_index</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>nboot</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; [1] 0.2200318</div><div class='input'>
 
 </div></pre>
   </div>
