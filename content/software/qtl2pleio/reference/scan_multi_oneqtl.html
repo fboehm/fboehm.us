@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Perform model fitting for all ordered pairs of markers in a genomic region of interest — scan_pvl • qtl2pleio</title>
+<title>Perform multivariate, one-QTL model fitting for markers on all chromosomes — scan_multi_oneqtl • qtl2pleio</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,34 @@
 
 
 
-<meta property="og:title" content="Perform model fitting for all ordered pairs of markers in a genomic region of interest — scan_pvl" />
-<meta property="og:description" content="`scan_pvl` calculates log likelihood for d-variate phenotype model fits. Inputted parameter `start_snp` indicates where in the `probs` object to start the scan." />
+<meta property="og:title" content="Perform multivariate, one-QTL model fitting for markers on all chromosomes — scan_multi_oneqtl" />
+<meta property="og:description" content="The function first discards individuals with one or more missing phenotypes or missing covariates.
+It then infers variance components, Vg and Ve. Both Vg and Ve
+are d by d covariance matrices. It uses an expectation maximization algorithm, as
+implemented in the `gemma2` R package. `gemma2` R package is an R implementation of the
+GEMMA algorithm for multivariate variance component estimation (Zhou &amp;amp; Stephens 2014 Nature methods).
+Note that variance components are fitted on a model that uses the d-variate phenotype
+but contains no genetic information. This model does, however,
+use the specified covariates (after dropping dependent columns
+in the covariates matrix).
+These inferred covariance matrices, \(\hat{Vg}\) and \(\hat{Ve}\),
+are then used in subsequent model fitting via
+generalized least squares.
+Generalized least squares model fitting is applied to every marker on
+every chromosome.
+For a single marker, we fit the model:
+$$vec(Y) = Xvec(B) + vec(G) + vec(E)$$ where
+$$G \sim MN(0, K, \hat{Vg})$$ and $$E \sim MN(0, I, \hat{Ve})$$ where \(MN\) denotes the matrix-variate
+normal distribution with three parameters: mean matrix, covariance among rows, and
+covariance among columns. \(vec\) denotes the vectorization operation, ie, stacking by columns.
+\(K\) is a kinship matrix, typically calculated by leave-one-chromosome-out methods.
+\(Y\) is the n by d phenotypes matrix. \(X\) is a block-diagonal nd by fd matrix consisting of
+d blocks each of dimension n by f. Each n by f block (on the diagonal) contains a matrix of
+founder allele probabilities for the n subjects at a single marker. The off-diagonal blocks
+have only zero entries.
+The log-likelihood is returned for each model. The outputted object is a tibble with
+d + 1 columns. The first d columns specify the markers used in the corresponding model fit, while
+the last column specifies the log-likelihood value at that d-tuple of markers." />
 
 
 
@@ -139,68 +165,12 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Perform model fitting for all ordered pairs of markers in a genomic region of interest</h1>
-    <small class="dont-index">Source: <a href='https://github.com/fboehm/qtl2pleio/blob/master/R/scan_pvl.R'><code>R/scan_pvl.R</code></a></small>
-    <div class="hidden name"><code>scan_pvl.Rd</code></div>
+    <h1>Perform multivariate, one-QTL model fitting for markers on all chromosomes</h1>
+    <small class="dont-index">Source: <a href='https://github.com/fboehm/qtl2pleio/blob/master/R/scan_multi_onechr.R'><code>R/scan_multi_onechr.R</code></a></small>
+    <div class="hidden name"><code>scan_multi_oneqtl.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>`scan_pvl` calculates log likelihood for d-variate phenotype model fits. Inputted parameter `start_snp` indicates where in the `probs` object to start the scan.</p>
-    </div>
-
-    <pre class="usage"><span class='fu'>scan_pvl</span>(
-  <span class='no'>probs</span>,
-  <span class='no'>pheno</span>,
-  <span class='kw'>kinship</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>addcovar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>start_snp</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='no'>n_snp</span>,
-  <span class='kw'>max_iter</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
-  <span class='kw'>max_prec</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='fl'>1e+08</span>
-)</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>probs</th>
-      <td><p>an array of founder allele probabilities for a single chromosome</p></td>
-    </tr>
-    <tr>
-      <th>pheno</th>
-      <td><p>a matrix of phenotypes</p></td>
-    </tr>
-    <tr>
-      <th>kinship</th>
-      <td><p>a kinship matrix for one chromosome</p></td>
-    </tr>
-    <tr>
-      <th>addcovar</th>
-      <td><p>a matrix, n subjects by c additive covariates</p></td>
-    </tr>
-    <tr>
-      <th>start_snp</th>
-      <td><p>index of where to start the scan within probs</p></td>
-    </tr>
-    <tr>
-      <th>n_snp</th>
-      <td><p>the number of (consecutive) markers to include in the scan</p></td>
-    </tr>
-    <tr>
-      <th>max_iter</th>
-      <td><p>maximum number of iterations for EM algorithm</p></td>
-    </tr>
-    <tr>
-      <th>max_prec</th>
-      <td><p>stepwise precision for EM algorithm. EM stops once incremental difference in log likelihood is less than max_prec</p></td>
-    </tr>
-    </table>
-
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>a tibble with d + 1 columns. First d columns indicate the genetic data (by listing the marker ids) used in the design matrix; last is log10 likelihood</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
     <p>The function first discards individuals with one or more missing phenotypes or missing covariates.
 It then infers variance components, Vg and Ve. Both Vg and Ve
 are d by d covariance matrices. It uses an expectation maximization algorithm, as
@@ -213,9 +183,9 @@ in the covariates matrix).
 These inferred covariance matrices, \(\hat{Vg}\) and \(\hat{Ve}\),
 are then used in subsequent model fitting via
 generalized least squares.
-Generalized least squares model fitting is applied to every d-tuple of
-markers within the specified genomic region for `scan_pvl`.
-For a single d-tuple of markers, we fit the model:
+Generalized least squares model fitting is applied to every marker on
+every chromosome.
+For a single marker, we fit the model:
 $$vec(Y) = Xvec(B) + vec(G) + vec(E)$$ where
 $$G \sim MN(0, K, \hat{Vg})$$ and $$E \sim MN(0, I, \hat{Ve})$$ where \(MN\) denotes the matrix-variate
 normal distribution with three parameters: mean matrix, covariance among rows, and
@@ -228,6 +198,34 @@ have only zero entries.
 The log-likelihood is returned for each model. The outputted object is a tibble with
 d + 1 columns. The first d columns specify the markers used in the corresponding model fit, while
 the last column specifies the log-likelihood value at that d-tuple of markers.</p>
+    </div>
+
+    <pre class="usage"><span class='fu'>scan_multi_oneqtl</span>(<span class='no'>probs_list</span>, <span class='no'>pheno</span>, <span class='kw'>kinship_list</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>addcovar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>probs_list</th>
+      <td><p>an list of arrays of founder allele probabilities</p></td>
+    </tr>
+    <tr>
+      <th>pheno</th>
+      <td><p>a matrix of phenotypes</p></td>
+    </tr>
+    <tr>
+      <th>kinship_list</th>
+      <td><p>a list of kinship matrices, one for each chromosome</p></td>
+    </tr>
+    <tr>
+      <th>addcovar</th>
+      <td><p>a matrix, n subjects by c additive covariates</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a tibble with d + 1 columns. First d columns indicate the genetic data (by listing the marker ids) used in the design matrix; last is log10 likelihood</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Knott SA, Haley CS (2000) Multitrait
@@ -255,8 +253,8 @@ multi-parent populations. GENETICS https://www.genetics.org/content/211/2/495.</
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>probs</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"s"</span>, <span class='fl'>1</span>:<span class='no'>n</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>probs</span>) <span class='kw'>&lt;-</span> <span class='no'>LETTERS</span>[<span class='fl'>1</span>:<span class='fl'>2</span>]
 <span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span>(<span class='no'>probs</span>)<span class='kw'>[[</span><span class='fl'>3</span>]] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"m"</span>, <span class='fl'>1</span>:<span class='fl'>5</span>)
-<span class='fu'>scan_pvl</span>(<span class='kw'>probs</span> <span class='kw'>=</span> <span class='no'>probs</span>, <span class='kw'>pheno</span> <span class='kw'>=</span> <span class='no'>pheno</span>, <span class='kw'>kinship</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-<span class='kw'>start_snp</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_snp</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; <span class='error'>Error in stopifnot(!is.null(rownames(probs)), !is.null(colnames(probs)),     !is.null(dimnames(probs)[[3]]), !is.null(rownames(pheno)),     n_snp &gt; 0, start_snp &gt; 0, start_snp + n_snp - 1 &lt;= dim(probs)[3]): object 'n_snp' not found</span></div></pre>
+<span class='fu'>scan_multi_oneqtl</span>(<span class='kw'>probs_list</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>probs</span>, <span class='no'>probs</span>), <span class='kw'>pheno</span> <span class='kw'>=</span> <span class='no'>pheno</span>)</div><div class='output co'>#&gt; <span class='error'>Error in stopifnot(!is.null(rownames(probs)), !is.null(colnames(probs)),     !is.null(dimnames(probs)[[3]]), !is.null(rownames(pheno)),     n_snp &gt; 0, start_snp &gt; 0, start_snp + n_snp - 1 &lt;= dim(probs)[3]): object 'n_snp' not found</span></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

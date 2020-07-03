@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Simulate a single multivariate data set consisting of n subjects and d phenotypes for each — sim1 • qtl2pleio</title>
+<title>Permute the phenotypes matrix and then scan the genome. Record the genomewide greatest LOD score for each permuted data set. — scan_multi_oneqtl_perm • qtl2pleio</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Simulate a single multivariate data set consisting of n subjects and d phenotypes for each — sim1" />
-<meta property="og:description" content="Simulate a single multivariate data set consisting of n subjects and d phenotypes for each" />
+<meta property="og:title" content="Permute the phenotypes matrix and then scan the genome. Record the genomewide greatest LOD score for each permuted data set. — scan_multi_oneqtl_perm" />
+<meta property="og:description" content="Permute the phenotypes matrix and then scan the genome. Record the genomewide greatest LOD score for each permuted data set." />
 
 
 
@@ -139,84 +139,52 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Simulate a single multivariate data set consisting of n subjects and d phenotypes for each</h1>
-    <small class="dont-index">Source: <a href='https://github.com/fboehm/qtl2pleio/blob/master/R/sim1.R'><code>R/sim1.R</code></a></small>
-    <div class="hidden name"><code>sim1.Rd</code></div>
+    <h1>Permute the phenotypes matrix and then scan the genome. Record the genomewide greatest LOD score for each permuted data set.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/fboehm/qtl2pleio/blob/master/R/scan_multi_onechr.R'><code>R/scan_multi_onechr.R</code></a></small>
+    <div class="hidden name"><code>scan_multi_oneqtl_perm.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Simulate a single multivariate data set consisting of n subjects and d phenotypes for each</p>
+    <p>Permute the phenotypes matrix and then scan the genome. Record the genomewide greatest LOD score for each permuted data set.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sim1</span>(<span class='no'>X</span>, <span class='no'>B</span>, <span class='no'>Sigma</span>)</pre>
+    <pre class="usage"><span class='fu'>scan_multi_oneqtl_perm</span>(
+  <span class='no'>probs_list</span>,
+  <span class='no'>pheno</span>,
+  <span class='kw'>kinship_list</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>addcovar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>n_perm</span> <span class='kw'>=</span> <span class='fl'>1</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>X</th>
-      <td><p>design matrix (incorporating genotype probabilities from two loci), dn by df</p></td>
+      <th>probs_list</th>
+      <td><p>a list of founder allele probabilities, one array per chromosome</p></td>
     </tr>
     <tr>
-      <th>B</th>
-      <td><p>a matrix of allele effects, f rows by d columns</p></td>
+      <th>pheno</th>
+      <td><p>a matrix of trait values</p></td>
     </tr>
     <tr>
-      <th>Sigma</th>
-      <td><p>dn by dn covariance matrix</p></td>
+      <th>kinship_list</th>
+      <td><p>a list of kinship matrices, one per chromosome</p></td>
+    </tr>
+    <tr>
+      <th>addcovar</th>
+      <td><p>a matrix of covariate values</p></td>
+    </tr>
+    <tr>
+      <th>n_perm</th>
+      <td><p>positive integer for the number of permuted data sets to scan.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a vector of length dn. The first n entries are for trait 1, the second n for trait 2, etc.</p>
+    <p>a vector of `n_perm` max lod statistics</p>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>n_mouse</span> <span class='kw'>&lt;-</span> <span class='fl'>20</span>
-<span class='no'>geno</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='no'>n_mouse</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>1</span> / <span class='fl'>2</span>)
-<span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>gemma2</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gemma2/man/stagger_mats.html'>stagger_mats</a></span>(<span class='no'>geno</span>, <span class='no'>geno</span>)
-<span class='no'>B</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>), <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>nrow</span> <span class='kw'>=</span> <span class='fl'>1</span>)
-<span class='fu'>sim1</span>(<span class='no'>X</span>, <span class='no'>B</span>, <span class='kw'>Sigma</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>2</span> * <span class='no'>n_mouse</span>))</div><div class='output co'>#&gt;              [,1]
-#&gt;  [1,]  0.37769313
-#&gt;  [2,]  1.92660650
-#&gt;  [3,]  1.45435482
-#&gt;  [4,]  1.57440044
-#&gt;  [5,]  2.05984222
-#&gt;  [6,] -0.76422002
-#&gt;  [7,]  1.76400192
-#&gt;  [8,] -0.30053093
-#&gt;  [9,]  0.01175105
-#&gt; [10,]  0.85071030
-#&gt; [11,] -1.55456583
-#&gt; [12,] -0.20399135
-#&gt; [13,] -0.19156194
-#&gt; [14,]  0.51595739
-#&gt; [15,] -0.30128401
-#&gt; [16,] -0.82552051
-#&gt; [17,]  1.63654057
-#&gt; [18,]  1.01253254
-#&gt; [19,] -0.90210237
-#&gt; [20,]  0.50419825
-#&gt; [21,]  0.50782823
-#&gt; [22,]  0.24735027
-#&gt; [23,] -0.80601772
-#&gt; [24,]  3.96075593
-#&gt; [25,]  2.18975968
-#&gt; [26,] -1.36811281
-#&gt; [27,]  2.82786930
-#&gt; [28,]  3.12390932
-#&gt; [29,]  2.85217358
-#&gt; [30,]  2.09160758
-#&gt; [31,] -0.70066867
-#&gt; [32,] -0.52775293
-#&gt; [33,]  0.50559912
-#&gt; [34,]  1.76343433
-#&gt; [35,]  1.32342217
-#&gt; [36,]  1.01357184
-#&gt; [37,]  1.42835885
-#&gt; [38,] -0.08151085
-#&gt; [39,]  1.52673800
-#&gt; [40,]  2.60623267</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

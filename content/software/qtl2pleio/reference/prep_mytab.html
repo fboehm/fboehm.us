@@ -148,7 +148,7 @@
     <p>Prepare mytab object for use within scan_pvl R code</p>
     </div>
 
-    <pre class="usage"><span class='fu'>prep_mytab</span>(<span class='no'>d_size</span>, <span class='no'>n_snp</span>)</pre>
+    <pre class="usage"><span class='fu'>prep_mytab</span>(<span class='no'>d_size</span>, <span class='no'>n_snp</span>, <span class='kw'>pvl</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -160,6 +160,10 @@
     <tr>
       <th>n_snp</th>
       <td><p>an integer, the number of markers</p></td>
+    </tr>
+    <tr>
+      <th>pvl</th>
+      <td><p>logical indicating whether to output dataframe with all d-tuples for a d-QTL scan, or only those models that examine one marker at a time.</p></td>
     </tr>
     </table>
 
