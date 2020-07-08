@@ -179,17 +179,17 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
 <span class='co'># set up input matrix</span>
 <span class='no'>foo</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='fl'>10</span> * <span class='fl'>3</span>), <span class='kw'>nrow</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>3</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>foo</span>) <span class='kw'>&lt;-</span> <span class='no'>s_id</span>
-<span class='fu'>subset_input</span>(<span class='kw'>input</span> <span class='kw'>=</span> <span class='no'>foo</span>, <span class='kw'>id2keep</span> <span class='kw'>=</span> <span class='no'>s_id</span>)</div><div class='output co'>#&gt;           [,1]        [,2]        [,3]
-#&gt; s1   0.4578173  0.73418909  0.33070126
-#&gt; s2  -0.3144782 -1.05455799 -1.75947902
-#&gt; s3  -0.1963372  0.03042473 -1.01638420
-#&gt; s4   0.5322072 -0.62059166  1.03686204
-#&gt; s5  -1.2969308 -0.19350202  0.03471228
-#&gt; s6  -0.1164599  0.39360687 -1.69369136
-#&gt; s7  -1.7914358 -0.03322616 -0.37408213
-#&gt; s8   1.0376384 -0.52872257 -1.25836245
-#&gt; s9  -0.7517373  3.07100715 -0.60810563
-#&gt; s10  1.4433202 -1.42472377 -1.36870786</div></pre>
+<span class='fu'>subset_input</span>(<span class='kw'>input</span> <span class='kw'>=</span> <span class='no'>foo</span>, <span class='kw'>id2keep</span> <span class='kw'>=</span> <span class='no'>s_id</span>)</div><div class='output co'>#&gt;            [,1]        [,2]       [,3]
+#&gt; s1  -1.87282861  0.83250613  0.2926086
+#&gt; s2   0.09132266 -0.91378741  0.3322364
+#&gt; s3   0.71236377 -0.27259543 -0.2319348
+#&gt; s4  -0.11011949  0.75108655 -0.8158072
+#&gt; s5  -1.05157582 -0.07685626  0.2160748
+#&gt; s6  -0.89140134  0.14710153 -1.1388658
+#&gt; s7  -0.61913804 -0.32123820  0.1401050
+#&gt; s8   0.25519905 -1.70314007 -0.6621339
+#&gt; s9  -0.43931592 -0.76103844 -0.5343918
+#&gt; s10  1.46814921 -0.75902539 -1.4128309</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
