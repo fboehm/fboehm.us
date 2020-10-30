@@ -85,7 +85,7 @@ parallelization via the `parallel` R package." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
       </span>
     </div>
 
@@ -112,6 +112,9 @@ parallelization via the `parallel` R package." />
     </li>
     <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
+    </li>
+    <li>
+      <a href="../articles/multivariate-one-QTL-scans.html">Multivariate, one-QTL scans</a>
     </li>
     <li>
       <a href="../articles/recla-analysis.html">Recla Analysis</a>
@@ -154,7 +157,7 @@ Creation of `fit1_pvl` - from code that originally resided in `scan_pvl`, enable
 parallelization via the `parallel` R package.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>fit1_pvl</span>(<span class='no'>indices</span>, <span class='no'>start_snp</span>, <span class='no'>probs</span>, <span class='no'>addcovar</span>, <span class='no'>inv_S</span>, <span class='no'>S</span>, <span class='no'>pheno</span>)</pre>
+    <pre class="usage"><span class='fu'>fit1_pvl</span><span class='op'>(</span><span class='va'>indices</span>, <span class='va'>start_snp</span>, <span class='va'>probs</span>, <span class='va'>addcovar</span>, <span class='va'>inv_S</span>, <span class='va'>S</span>, <span class='va'>pheno</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -194,22 +197,22 @@ parallelization via the `parallel` R package.</p>
     <p>a number, the log-likelihood for the specified model</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fl'>50</span>
-<span class='no'>pheno</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='fl'>2</span> * <span class='no'>n</span>), <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-<span class='no'>Vg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>2</span>)
-<span class='no'>Ve</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>2</span>)
-<span class='no'>Sigma</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='calc_Sigma.html'>calc_Sigma</a></span>(<span class='no'>Vg</span>, <span class='no'>Ve</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>n</span>))
-<span class='no'>Sigma_inv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/solve.html'>solve</a></span>(<span class='no'>Sigma</span>)
-<span class='no'>probs</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span>(<span class='kw'>dim</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>n</span>, <span class='fl'>2</span>, <span class='fl'>5</span>))
-<span class='no'>probs</span>[ , <span class='fl'>1</span>, ] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='no'>n</span> * <span class='fl'>5</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>)
-<span class='no'>probs</span>[ , <span class='fl'>2</span>, ] <span class='kw'>&lt;-</span> <span class='fl'>1</span> - <span class='no'>probs</span>[ , <span class='fl'>1</span>, ]
-<span class='no'>mytab</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='prep_mytab.html'>prep_mytab</a></span>(<span class='kw'>d_size</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>n_snp</span> <span class='kw'>=</span> <span class='fl'>5</span>)
-<span class='fu'>fit1_pvl</span>(<span class='no'>mytab</span>[<span class='fl'>1</span>, ], <span class='kw'>start_snp</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-<span class='kw'>probs</span> <span class='kw'>=</span> <span class='no'>probs</span>, <span class='kw'>addcovar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inv_S</span> <span class='kw'>=</span> <span class='no'>Sigma_inv</span>,
-<span class='kw'>S</span> <span class='kw'>=</span> <span class='no'>Sigma</span>,
-<span class='kw'>pheno</span> <span class='kw'>=</span> <span class='no'>pheno</span>
-)</div><div class='output co'>#&gt;          [,1]
-#&gt; [1,] -151.122</div></pre>
+    <pre class="examples"><div class='input'><span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fl'>50</span>
+<span class='va'>pheno</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>2</span> <span class='op'>*</span> <span class='va'>n</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>Vg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>Ve</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>Sigma</span> <span class='op'>&lt;-</span> <span class='fu'><a href='calc_Sigma.html'>calc_Sigma</a></span><span class='op'>(</span><span class='va'>Vg</span>, <span class='va'>Ve</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>Sigma_inv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/solve.html'>solve</a></span><span class='op'>(</span><span class='va'>Sigma</span><span class='op'>)</span>
+<span class='va'>probs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>2</span>, <span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>probs</span><span class='op'>[</span> , <span class='fl'>1</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>n</span> <span class='op'>*</span> <span class='fl'>5</span>, size <span class='op'>=</span> <span class='fl'>1</span>, prob <span class='op'>=</span> <span class='fl'>0.2</span><span class='op'>)</span>
+<span class='va'>probs</span><span class='op'>[</span> , <span class='fl'>2</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>1</span> <span class='op'>-</span> <span class='va'>probs</span><span class='op'>[</span> , <span class='fl'>1</span>, <span class='op'>]</span>
+<span class='va'>mytab</span> <span class='op'>&lt;-</span> <span class='fu'><a href='prep_mytab.html'>prep_mytab</a></span><span class='op'>(</span>d_size <span class='op'>=</span> <span class='fl'>2</span>, n_snp <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
+<span class='fu'>fit1_pvl</span><span class='op'>(</span><span class='va'>mytab</span><span class='op'>[</span><span class='fl'>1</span>, <span class='op'>]</span>, start_snp <span class='op'>=</span> <span class='fl'>1</span>,
+probs <span class='op'>=</span> <span class='va'>probs</span>, addcovar <span class='op'>=</span> <span class='cn'>NULL</span>, inv_S <span class='op'>=</span> <span class='va'>Sigma_inv</span>,
+S <span class='op'>=</span> <span class='va'>Sigma</span>,
+pheno <span class='op'>=</span> <span class='va'>pheno</span>
+<span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] -151.122</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -225,7 +228,7 @@ parallelization via the `parallel` R package.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
