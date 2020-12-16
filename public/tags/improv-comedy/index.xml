@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>improv comedy on fboehm.us</title>
-    <link>/tags/improv-comedy/</link>
+    <link>https://fboehm.us/tags/improv-comedy/</link>
     <description>Recent content in improv comedy on fboehm.us</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
     <lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/improv-comedy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fboehm.us/tags/improv-comedy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ImprovBoston Student Showcase video</title>
-      <link>/blog/improvboston-101-student-showcase-video/</link>
+      <link>https://fboehm.us/blog/improvboston-101-student-showcase-video/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
       <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>/blog/improvboston-101-student-showcase-video/</guid>
+      <guid>https://fboehm.us/blog/improvboston-101-student-showcase-video/</guid>
       <description>I have now completed ImprovBoston’s Improv Comedy 101 class. I’m happy to share the video of my class’s show from December 2019. You can view it here.
 (Last modified: 2020-02-08 12:40:41)</description>
     </item>

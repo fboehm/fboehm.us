@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fboehm.us: computing posts  </title>
-    <link>/categories/computing/</link>
+    <link>https://fboehm.us/categories/computing/</link>
     <description>Frederick Boehm&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
     <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://fboehm.us/categories/computing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>qtl2pleio on CRAN</title>
-      <link>/blog/qtl2pleio-on-cran/</link>
+      <link>https://fboehm.us/blog/qtl2pleio-on-cran/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>/blog/qtl2pleio-on-cran/</guid>
+      <guid>https://fboehm.us/blog/qtl2pleio-on-cran/</guid>
       <description>
 
 

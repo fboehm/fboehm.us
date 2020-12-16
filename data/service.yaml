@@ -1,3 +1,10 @@
+gsa-ecs-2020:
+  name: gsa-ecs-2020
+  description: Early career researcher leadership program
+  source: Genetics Society of America
+  type: service
+  start_date: "2020-03-01"
+  end_date: "2022-03-01"
 gsa-peer-2018:
   name: gsa-peer-2018
   description: Peer review trainee
@@ -128,5 +135,5 @@ letters:
   source: Letters to a Pre-scientist
   type: service
   start_date: "2018-10-01"
-  end_date: "2019-05-01"
+  end_date: "2020-05-01"
   exurl: "https://www.prescientist.org/"

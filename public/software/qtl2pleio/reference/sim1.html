@@ -82,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
       </span>
     </div>
 
@@ -109,6 +109,9 @@
     </li>
     <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
+    </li>
+    <li>
+      <a href="../articles/multivariate-one-QTL-scans.html">Multivariate, one-QTL scans</a>
     </li>
     <li>
       <a href="../articles/recla-analysis.html">Recla Analysis</a>
@@ -148,7 +151,7 @@
     <p>Simulate a single multivariate data set consisting of n subjects and d phenotypes for each</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sim1</span>(<span class='no'>X</span>, <span class='no'>B</span>, <span class='no'>Sigma</span>)</pre>
+    <pre class="usage"><span class='fu'>sim1</span><span class='op'>(</span><span class='va'>X</span>, <span class='va'>B</span>, <span class='va'>Sigma</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -172,51 +175,52 @@
     <p>a vector of length dn. The first n entries are for trait 1, the second n for trait 2, etc.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>n_mouse</span> <span class='kw'>&lt;-</span> <span class='fl'>20</span>
-<span class='no'>geno</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='no'>n_mouse</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>1</span> / <span class='fl'>2</span>)
-<span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>gemma2</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gemma2/man/stagger_mats.html'>stagger_mats</a></span>(<span class='no'>geno</span>, <span class='no'>geno</span>)
-<span class='no'>B</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>), <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>nrow</span> <span class='kw'>=</span> <span class='fl'>1</span>)
-<span class='fu'>sim1</span>(<span class='no'>X</span>, <span class='no'>B</span>, <span class='kw'>Sigma</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>2</span> * <span class='no'>n_mouse</span>))</div><div class='output co'>#&gt;               [,1]
-#&gt;  [1,] -0.319978820
-#&gt;  [2,] -0.278834279
-#&gt;  [3,]  1.039317096
-#&gt;  [4,]  1.594650797
-#&gt;  [5,] -0.979050445
-#&gt;  [6,]  0.204207089
-#&gt;  [7,]  1.085960972
-#&gt;  [8,] -0.349671966
-#&gt;  [9,]  1.702971138
-#&gt; [10,]  0.728471344
-#&gt; [11,]  1.859593181
-#&gt; [12,]  3.024155203
-#&gt; [13,] -0.337234198
-#&gt; [14,]  3.477145067
-#&gt; [15,]  2.376264164
-#&gt; [16,] -1.473551488
-#&gt; [17,] -0.345227990
-#&gt; [18,]  0.950180682
-#&gt; [19,] -0.146245649
-#&gt; [20,]  1.782644366
-#&gt; [21,]  0.475705566
-#&gt; [22,]  3.756315261
-#&gt; [23,] -0.230472754
-#&gt; [24,]  1.404155281
-#&gt; [25,] -2.231484275
-#&gt; [26,]  1.840332640
-#&gt; [27,]  0.946685864
-#&gt; [28,]  3.223728019
-#&gt; [29,]  0.325544925
-#&gt; [30,]  0.137240272
-#&gt; [31,]  3.454136238
-#&gt; [32,]  2.841060978
-#&gt; [33,]  0.906640280
-#&gt; [34,]  1.311339631
-#&gt; [35,]  2.482115591
-#&gt; [36,]  1.169676620
-#&gt; [37,]  0.344012511
-#&gt; [38,]  0.002671474
-#&gt; [39,]  3.432658547
-#&gt; [40,]  1.645490970</div></pre>
+    <pre class="examples"><div class='input'><span class='va'>n_mouse</span> <span class='op'>&lt;-</span> <span class='fl'>20</span>
+<span class='va'>geno</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>n_mouse</span>, size <span class='op'>=</span> <span class='fl'>1</span>, prob <span class='op'>=</span> <span class='fl'>1</span> <span class='op'>/</span> <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>X</span> <span class='op'>&lt;-</span> <span class='fu'>gemma2</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gemma2/man/stagger_mats.html'>stagger_mats</a></span><span class='op'>(</span><span class='va'>geno</span>, <span class='va'>geno</span><span class='op'>)</span>
+<span class='va'>B</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>2</span>, nrow <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'>sim1</span><span class='op'>(</span><span class='va'>X</span>, <span class='va'>B</span>, Sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span> <span class='op'>*</span> <span class='va'>n_mouse</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;              [,1]
+#&gt;  [1,]  0.37769313
+#&gt;  [2,]  1.92660650
+#&gt;  [3,]  1.45435482
+#&gt;  [4,]  1.57440044
+#&gt;  [5,]  2.05984222
+#&gt;  [6,] -0.76422002
+#&gt;  [7,]  1.76400192
+#&gt;  [8,] -0.30053093
+#&gt;  [9,]  0.01175105
+#&gt; [10,]  0.85071030
+#&gt; [11,] -1.55456583
+#&gt; [12,] -0.20399135
+#&gt; [13,] -0.19156194
+#&gt; [14,]  0.51595739
+#&gt; [15,] -0.30128401
+#&gt; [16,] -0.82552051
+#&gt; [17,]  1.63654057
+#&gt; [18,]  1.01253254
+#&gt; [19,] -0.90210237
+#&gt; [20,]  0.50419825
+#&gt; [21,]  0.50782823
+#&gt; [22,]  0.24735027
+#&gt; [23,] -0.80601772
+#&gt; [24,]  3.96075593
+#&gt; [25,]  2.18975968
+#&gt; [26,] -1.36811281
+#&gt; [27,]  2.82786930
+#&gt; [28,]  3.12390932
+#&gt; [29,]  2.85217358
+#&gt; [30,]  2.09160758
+#&gt; [31,] -0.70066867
+#&gt; [32,] -0.52775293
+#&gt; [33,]  0.50559912
+#&gt; [34,]  1.76343433
+#&gt; [35,]  1.32342217
+#&gt; [36,]  1.01357184
+#&gt; [37,]  1.42835885
+#&gt; [38,] -0.08151085
+#&gt; [39,]  1.52673800
+#&gt; [40,]  2.60623267</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -232,7 +236,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

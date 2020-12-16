@@ -190,7 +190,7 @@ Boehm_Yandell_2019:
   authors:
   - Frederick Boehm
   - Brian Yandell
-  - Karl Broman
+  - Karl W. Broman
   date: '2019-06-30'
   exurl: https://dx.doi.org/10.21105/joss.01435
 Boehm_Chesler_2019:
@@ -242,3 +242,33 @@ Moorthy_Becker_2009:
   - Frederick J Boehm III
   - Arjang Djamali
   date: '2009-01-01'
+wells_2016:
+  name: wells_2016
+  doi: 10.1080/10584609.2016.1224416
+  type: paper
+  title: How Trump Drove Coverage to the Nomination - Hybrid Media Campaigning
+  authors:
+  - Chris Wells
+  - Dhavan V. Shah
+  - Jon C. Pevehouse
+  - JungHwan Yang
+  - Ayellet Pelled
+  - Frederick Boehm
+  - Josephine Lukito
+  - Shreenita Ghosh
+  - Jessica L. Schmidt
+  date: '2016-09-08'
+  exurl: https://doi.org/10.1080/10584609.2016.1224416
+pelled_2018:
+  name: pelled_2018
+  type: book
+  title: "Little Marco, Lyin Ted, Crooked Hillary, and the Biased Media - How Trump Used Twitter to Attack and Organize"
+  date: '2018-01-01'
+  authors:
+  - Ayellet Pelled
+  - Josephine Lukito
+  - Fred Boehm
+  - JungHwan Yang
+  - Dhavan Shah
+  exurl: https://doi.org/10.4324/9781351209434
+  doi: 10.4324/9781351209434

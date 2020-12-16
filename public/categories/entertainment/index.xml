@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fboehm.us: entertainment posts  </title>
-    <link>/categories/entertainment/</link>
+    <link>https://fboehm.us/categories/entertainment/</link>
     <description>Frederick Boehm&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
     <lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/categories/entertainment/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://fboehm.us/categories/entertainment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ImprovBoston Student Showcase video</title>
-      <link>/blog/improvboston-101-student-showcase-video/</link>
+      <link>https://fboehm.us/blog/improvboston-101-student-showcase-video/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
       <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
-      <guid>/blog/improvboston-101-student-showcase-video/</guid>
+      <guid>https://fboehm.us/blog/improvboston-101-student-showcase-video/</guid>
       <description>
 
 

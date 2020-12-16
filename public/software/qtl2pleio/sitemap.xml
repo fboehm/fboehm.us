@@ -61,6 +61,9 @@
     <loc>https://fboehm.us/software/qtl2pleio/reference/prep_mytab.html</loc>
   </url>
   <url>
+    <loc>https://fboehm.us/software/qtl2pleio/reference/process_inputs.html</loc>
+  </url>
+  <url>
     <loc>https://fboehm.us/software/qtl2pleio/reference/qtl2pleio.html</loc>
   </url>
   <url>
@@ -71,6 +74,15 @@
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/reference/rcpp_log_dmvnorm2.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.us/software/qtl2pleio/reference/scan_multi_onechr.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.us/software/qtl2pleio/reference/scan_multi_oneqtl.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.us/software/qtl2pleio/reference/scan_multi_oneqtl_perm.html</loc>
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/reference/scan_pvl.html</loc>
@@ -89,6 +101,9 @@
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/articles/d-variate-analysis.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.us/software/qtl2pleio/articles/multivariate-one-QTL-scans.html</loc>
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/articles/recla-analysis.html</loc>

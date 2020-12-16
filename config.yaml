@@ -8,7 +8,7 @@ enableGitInfo: true
 googleAnalytics: UA-46757486-5
 pygmentsCodefences: true
 pygmentsStyle: "lovelace"
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "public/notebook/.git", "static/notebook/.git"]
+ignoreFiles: ["\\.knit\\.md$", "\\.utf8\\.md$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "public/notebook/.git", "static/notebook/.git"]
 canonifyURLs: false
 permalinks:
   blog: "/blog/:slug/"
