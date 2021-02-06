@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -82,19 +84,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -104,9 +100,6 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/bootstrap-cluster.html">Using HTCondor for bootstrap analysis</a>
-    </li>
     <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
     </li>
@@ -125,7 +118,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/fboehm/qtl2pleio/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -181,46 +174,46 @@
 <span class='va'>B</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>2</span>, nrow <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
 <span class='fu'>sim1</span><span class='op'>(</span><span class='va'>X</span>, <span class='va'>B</span>, Sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span> <span class='op'>*</span> <span class='va'>n_mouse</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;              [,1]
-#&gt;  [1,]  0.37769313
-#&gt;  [2,]  1.92660650
-#&gt;  [3,]  1.45435482
-#&gt;  [4,]  1.57440044
-#&gt;  [5,]  2.05984222
-#&gt;  [6,] -0.76422002
-#&gt;  [7,]  1.76400192
-#&gt;  [8,] -0.30053093
-#&gt;  [9,]  0.01175105
-#&gt; [10,]  0.85071030
-#&gt; [11,] -1.55456583
-#&gt; [12,] -0.20399135
-#&gt; [13,] -0.19156194
-#&gt; [14,]  0.51595739
-#&gt; [15,] -0.30128401
-#&gt; [16,] -0.82552051
-#&gt; [17,]  1.63654057
-#&gt; [18,]  1.01253254
-#&gt; [19,] -0.90210237
-#&gt; [20,]  0.50419825
-#&gt; [21,]  0.50782823
-#&gt; [22,]  0.24735027
-#&gt; [23,] -0.80601772
-#&gt; [24,]  3.96075593
-#&gt; [25,]  2.18975968
-#&gt; [26,] -1.36811281
-#&gt; [27,]  2.82786930
-#&gt; [28,]  3.12390932
-#&gt; [29,]  2.85217358
-#&gt; [30,]  2.09160758
-#&gt; [31,] -0.70066867
-#&gt; [32,] -0.52775293
-#&gt; [33,]  0.50559912
-#&gt; [34,]  1.76343433
-#&gt; [35,]  1.32342217
-#&gt; [36,]  1.01357184
-#&gt; [37,]  1.42835885
-#&gt; [38,] -0.08151085
-#&gt; [39,]  1.52673800
-#&gt; [40,]  2.60623267</div></pre>
+#&gt;  [1,]  0.12863291
+#&gt;  [2,] -0.45729772
+#&gt;  [3,]  0.62772851
+#&gt;  [4,] -0.19146280
+#&gt;  [5,]  0.58708961
+#&gt;  [6,] -0.11533387
+#&gt;  [7,]  0.34681789
+#&gt;  [8,]  0.72167655
+#&gt;  [9,] -0.19136770
+#&gt; [10,] -0.54452703
+#&gt; [11,] -0.03527251
+#&gt; [12,]  1.04785759
+#&gt; [13,] -0.24038406
+#&gt; [14,] -0.73669918
+#&gt; [15,] -0.97348996
+#&gt; [16,] -0.50186833
+#&gt; [17,]  1.08659135
+#&gt; [18,]  2.14486935
+#&gt; [19,]  2.28297816
+#&gt; [20,]  1.11339509
+#&gt; [21,]  0.10040642
+#&gt; [22,]  3.47456298
+#&gt; [23,]  1.75776342
+#&gt; [24,]  2.61409513
+#&gt; [25,]  1.49274063
+#&gt; [26,]  1.19029818
+#&gt; [27,]  2.25928577
+#&gt; [28,]  2.62588272
+#&gt; [29,] -0.74465958
+#&gt; [30,]  1.83711640
+#&gt; [31,]  0.83662292
+#&gt; [32,] -0.61284798
+#&gt; [33,]  0.86238545
+#&gt; [34,]  1.65703622
+#&gt; [35,] -0.42119374
+#&gt; [36,]  2.59785938
+#&gt; [37,] -0.53900500
+#&gt; [38,]  2.98459760
+#&gt; [39,]  1.45445926
+#&gt; [40,]  1.07715988</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -236,7 +229,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

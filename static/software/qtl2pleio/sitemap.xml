@@ -37,6 +37,9 @@
     <loc>https://fboehm.us/software/qtl2pleio/reference/check_missingness.html</loc>
   </url>
   <url>
+    <loc>https://fboehm.us/software/qtl2pleio/reference/convert_to_scan1_output.html</loc>
+  </url>
+  <url>
     <loc>https://fboehm.us/software/qtl2pleio/reference/find_pleio_peak_tib.html</loc>
   </url>
   <url>
@@ -95,9 +98,6 @@
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/reference/subset_kinship.html</loc>
-  </url>
-  <url>
-    <loc>https://fboehm.us/software/qtl2pleio/articles/bootstrap-cluster.html</loc>
   </url>
   <url>
     <loc>https://fboehm.us/software/qtl2pleio/articles/d-variate-analysis.html</loc>

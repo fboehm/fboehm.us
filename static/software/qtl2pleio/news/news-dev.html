@@ -44,6 +44,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -81,19 +83,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -103,9 +99,6 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/bootstrap-cluster.html">Using HTCondor for bootstrap analysis</a>
-    </li>
     <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
     </li>
@@ -124,7 +117,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/fboehm/qtl2pleio/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -149,9 +142,9 @@
 <h1 class="page-header" data-toc-text="0.1.2.9000">
 <a href="#qtl2pleio-0129000" class="anchor"></a>qtl2pleio 0.1.2.9000<small> Unreleased </small>
 </h1>
-<div id="major-changes-17" class="section level2">
+<div id="major-changes-20" class="section level2">
 <h2 class="hasAnchor">
-<a href="#major-changes-17" class="anchor"></a>Major changes</h2>
+<a href="#major-changes-20" class="anchor"></a>Major changes</h2>
 <ul>
 <li>added inst/CITATION file<br>
 </li>
@@ -175,9 +168,9 @@
 <h1 class="page-header" data-toc-text="0.1.2.9001">
 <a href="#qtl2pleio-0129001" class="anchor"></a>qtl2pleio 0.1.2.9001<small> Unreleased </small>
 </h1>
-<div id="major-changes-16" class="section level2">
+<div id="major-changes-19" class="section level2">
 <h2 class="hasAnchor">
-<a href="#major-changes-16" class="anchor"></a>Major changes</h2>
+<a href="#major-changes-19" class="anchor"></a>Major changes</h2>
 <ul>
 <li>added a vignette for HTCondor &amp; bootstrap analysis</li>
 <li>updated README.Rmd and README.md (per suggestions &amp; PR of <a href='https://github.com/kbroman'>@kbroman</a>)</li>
@@ -188,17 +181,17 @@
 <h1 class="page-header" data-toc-text="0.1.2.9002">
 <a href="#qtl2pleio-0129002" class="anchor"></a>qtl2pleio 0.1.2.9002<small> Unreleased </small>
 </h1>
-<div id="major-changes-15" class="section level2">
+<div id="major-changes-18" class="section level2">
 <h2 class="hasAnchor">
-<a href="#major-changes-15" class="anchor"></a>Major changes</h2>
+<a href="#major-changes-18" class="anchor"></a>Major changes</h2>
 <ul>
 <li>changed default behavior of <code>plot_pvl</code> to not indicate univariate peak positions.</li>
 <li>fixed CITATION file to tell users to cite Biorxiv preprint (following CITATION file format of rqtl/qtl2)</li>
 </ul>
 </div>
-<div id="minor-changes-15" class="section level2">
+<div id="minor-changes-18" class="section level2">
 <h2 class="hasAnchor">
-<a href="#minor-changes-15" class="anchor"></a>Minor changes</h2>
+<a href="#minor-changes-18" class="anchor"></a>Minor changes</h2>
 <ul>
 <li>Removed hex logo file from repo and deleted it from README</li>
 <li>revised paper.md in preparation for JOSS submission</li>
@@ -210,6 +203,44 @@
 <ul>
 <li><p>Re-created profile LOD plots for vignettes and README without indicating univariate peak positions.</p></li>
 <li><p>Added line type arguments to <code>plot_pvl</code>.</p></li>
+</ul>
+</div>
+</div>
+    <div id="qtl2pleio-1429000" class="section level1">
+<h1 class="page-header" data-toc-text="1.4.2.9000">
+<a href="#qtl2pleio-1429000" class="anchor"></a>qtl2pleio 1.4.2.9000<small> Unreleased </small>
+</h1>
+<div id="major-changes-2" class="section level2">
+<h2 class="hasAnchor">
+<a href="#major-changes-2" class="anchor"></a>Major changes</h2>
+<ul>
+<li>added function <code>convert_to_scan1_output</code> to convert multivariate, one-QTL lods to output format of <code><a href="https://rdrr.io/pkg/qtl2/man/scan1.html">qtl2::scan1</a></code>, for use in <code><a href="https://rdrr.io/pkg/qtl2/man/bayes_int.html">qtl2::bayes_int</a></code>.</li>
+</ul>
+</div>
+<div id="minor-changes-2" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes-2" class="anchor"></a>Minor changes</h2>
+<ul>
+<li>None</li>
+</ul>
+</div>
+</div>
+    <div id="qtl2pleio-1439000" class="section level1">
+<h1 class="page-header" data-toc-text="1.4.3.9000">
+<a href="#qtl2pleio-1439000" class="anchor"></a>qtl2pleio 1.4.3.9000<small> Unreleased </small>
+</h1>
+<div id="major-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#major-changes" class="anchor"></a>Major changes</h2>
+<ul>
+<li>None</li>
+</ul>
+</div>
+<div id="minor-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes" class="anchor"></a>Minor changes</h2>
+<ul>
+<li>Started using Github Actions for continuous integration testing.</li>
 </ul>
 </div>
 </div>
@@ -230,7 +261,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

@@ -48,6 +48,8 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -85,19 +87,13 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -107,9 +103,6 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/bootstrap-cluster.html">Using HTCondor for bootstrap analysis</a>
-    </li>
     <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
     </li>
@@ -128,7 +121,7 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/fboehm/qtl2pleio/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -183,17 +176,17 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
 <span class='va'>foo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>10</span> <span class='op'>*</span> <span class='fl'>3</span><span class='op'>)</span>, nrow <span class='op'>=</span> <span class='fl'>10</span>, ncol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>foo</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>s_id</span>
 <span class='fu'>subset_input</span><span class='op'>(</span>input <span class='op'>=</span> <span class='va'>foo</span>, id2keep <span class='op'>=</span> <span class='va'>s_id</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;           [,1]        [,2]        [,3]
-#&gt; s1   0.4578173  0.73418909  0.33070126
-#&gt; s2  -0.3144782 -1.05455799 -1.75947902
-#&gt; s3  -0.1963372  0.03042473 -1.01638420
-#&gt; s4   0.5322072 -0.62059166  1.03686204
-#&gt; s5  -1.2969308 -0.19350202  0.03471228
-#&gt; s6  -0.1164599  0.39360687 -1.69369136
-#&gt; s7  -1.7914358 -0.03322616 -0.37408213
-#&gt; s8   1.0376384 -0.52872257 -1.25836245
-#&gt; s9  -0.7517373  3.07100715 -0.60810563
-#&gt; s10  1.4433202 -1.42472377 -1.36870786</div></pre>
+</div><div class='output co'>#&gt;            [,1]        [,2]       [,3]
+#&gt; s1  -1.34074797 -2.16814685  0.4169224
+#&gt; s2  -2.19271124 -0.91754935 -2.2745533
+#&gt; s3   1.56809186  0.10268885 -1.2683205
+#&gt; s4  -0.03514251  0.07783576  0.6346674
+#&gt; s5   1.55185708 -0.54841718  0.2799669
+#&gt; s6  -0.63760140  2.20743416  1.1000911
+#&gt; s7  -0.98548753  0.31547913  0.6364982
+#&gt; s8  -2.10558882  0.03216748  0.8395000
+#&gt; s9  -0.04354969  0.15585690 -0.3503503
+#&gt; s10  0.90456079 -1.62969131  1.1048359</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -209,7 +202,7 @@ are ordered to match the ordering of subject ids in the vector `id2keep`. This
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

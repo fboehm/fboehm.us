@@ -37,18 +37,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qtl2pleio</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.4.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -60,9 +54,6 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/bootstrap-cluster.html">Using HTCondor for bootstrap analysis</a>
-    </li>
-    <li>
       <a href="../articles/d-variate-analysis.html">Multivariate analysis for two or more traits</a>
     </li>
     <li>
@@ -80,7 +71,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/fboehm/qtl2pleio/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -94,14 +85,13 @@
 
       
 
-      </header><script src="d-variate-analysis_files/header-attrs-2.5/header-attrs.js"></script><script src="d-variate-analysis_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="d-variate-analysis_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="d-variate-analysis_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="d-variate-analysis_files/header-attrs-2.6/header-attrs.js"></script><script src="d-variate-analysis_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Multivariate analysis for two or more traits</h1>
                         <h4 class="author">Frederick Boehm</h4>
             
-            <h4 class="date">2020-10-29</h4>
+            <h4 class="date">2021-02-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/fboehm/qtl2pleio/blob/master/vignettes/d-variate-analysis.Rmd"><code>vignettes/d-variate-analysis.Rmd</code></a></small>
       <div class="hidden name"><code>d-variate-analysis.Rmd</code></div>
@@ -111,58 +101,58 @@
     
     
 <p>The goal of this vignette is to introduce the functions that enable d-variate (for <span class="math inline">\(d \ge 2\)</span>) QTL analysis for d traits that each univariately map to a shared region of the genome. One may then ask whether the d traits share a single, pleiotropic QTL. The alternative hypothesis is that there is more than one QTL giving rise to the phenotype-genotype associations.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="va">is_inst</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span> <span class="op">{</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">is_inst</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">pkg</span><span class="op">)</span> <span class="op">{</span>
     <span class="fu"><a href="https://rdrr.io/r/base/nchar.html">nzchar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">pkg</span><span class="op">)</span><span class="op">)</span>
 <span class="op">}</span>
-<span class="va">qtl2_indic</span> <span class="op">&lt;-</span> <span class="fu">is_inst</span><span class="op">(</span><span class="st">"qtl2"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fboehm/qtl2pleio">qtl2pleio</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://kbroman.org/qtl2">qtl2</a></span><span class="op">)</span></pre></div>
+<span class="va">qtl2_indic</span> <span class="op">&lt;-</span> <span class="fu">is_inst</span><span class="op">(</span><span class="st">"qtl2"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fboehm/qtl2pleio">qtl2pleio</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://kbroman.org/qtl2">qtl2</a></span><span class="op">)</span></code></pre></div>
 <p>We also load the <code>qtl2</code> package with the <code>library</code> command.</p>
 <div id="reading-data-from-qtl2data-repository-on-github" class="section level2">
 <h2 class="hasAnchor">
 <a href="#reading-data-from-qtl2data-repository-on-github" class="anchor"></a>Reading data from <code>qtl2data</code> repository on github</h2>
 <p>We’ll consider the <a href="https://github.com/rqtl/qtl2data/tree/master/DOex"><code>DOex</code></a> data in the <a href="https://github.com/rqtl/qtl2data"><code>qtl2data</code></a> repository. We’ll download the DOex.zip file before calculating founder allele dosages.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rqtl/"</span>,
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rqtl/"</span>,
                <span class="st">"qtl2data/master/DOex/DOex.zip"</span><span class="op">)</span>
-<span class="va">DOex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/read_cross2.html">read_cross2</a></span><span class="op">(</span><span class="va">file</span><span class="op">)</span></pre></div>
+<span class="va">DOex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/read_cross2.html">read_cross2</a></span><span class="op">(</span><span class="va">file</span><span class="op">)</span></code></pre></div>
 <p>Let’s calculate the founder allele dosages from the 36-state genotype probabilities.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="va">probs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/calc_genoprob.html">calc_genoprob</a></span><span class="op">(</span><span class="va">DOex</span><span class="op">)</span>
-<span class="va">pr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/genoprob_to_alleleprob.html">genoprob_to_alleleprob</a></span><span class="op">(</span><span class="va">probs</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">probs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/calc_genoprob.html">calc_genoprob</a></span><span class="op">(</span><span class="va">DOex</span><span class="op">)</span>
+<span class="va">pr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/genoprob_to_alleleprob.html">genoprob_to_alleleprob</a></span><span class="op">(</span><span class="va">probs</span><span class="op">)</span></code></pre></div>
 <p>We now have an allele probabilities object stored in <code>pr</code>.</p>
 </div>
 <div id="kinship-calculations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#kinship-calculations" class="anchor"></a>Kinship calculations</h2>
 <p>For our statistical model, we need a kinship matrix. Although we don’t have genome-wide data - since we have allele probabilities for only 3 chromosomes - let’s calculate a kinship matrix using “leave-one-chromosome-out”. In practice, one would want to use allele probabilities from a full genome-wide set of markers.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/calc_kinship.html">calc_kinship</a></span><span class="op">(</span>probs <span class="op">=</span> <span class="va">pr</span>, type <span class="op">=</span> <span class="st">"loco"</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">kinship</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/calc_kinship.html">calc_kinship</a></span><span class="op">(</span>probs <span class="op">=</span> <span class="va">pr</span>, type <span class="op">=</span> <span class="st">"loco"</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">kinship</span></code></pre></div>
 </div>
 <div id="simulating-phenotypes-with-qtl2pleiosim1" class="section level2">
 <h2 class="hasAnchor">
 <a href="#simulating-phenotypes-with-qtl2pleiosim1" class="anchor"></a>Simulating phenotypes with <code>qtl2pleio::sim1</code>
 </h2>
 <p>The function to simulate phenotypes in <code>qtl2pleio</code> is <code>sim1</code>. By examining its help page, we see that it takes five arguments. The help page also gives the dimensions of the inputs.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="co"># set up the design matrix, X</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># set up the design matrix, X</span>
 <span class="va">pp</span> <span class="op">&lt;-</span> <span class="va">pr</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="co">#we'll work with Chr 3's genotype data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">pp</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">pp</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 261   8 102</code></pre>
 <p>We prepare a block-diagonal design matrix X that contains two nonzero blocks on the diagonal, one for each trait. We use here a function from the <code>gemma2</code> R package to set up the needed matrix.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="co">#Next, we prepare a design matrix X</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#Next, we prepare a design matrix X</span>
 <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">gemma2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/gemma2/man/stagger_mats.html">stagger_mats</a></span><span class="op">(</span><span class="va">pp</span><span class="op">[</span> , , <span class="fl">50</span><span class="op">]</span>, <span class="va">pp</span><span class="op">[</span> , , <span class="fl">50</span><span class="op">]</span>, <span class="va">pp</span><span class="op">[</span> , , <span class="fl">50</span><span class="op">]</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 783  24</code></pre>
 <p><span class="math inline">\(X\)</span> is a block-diagonal matrix, with 3 diagonal blocks of equal dimension.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="co"># assemble B matrix of allele effects</span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># assemble B matrix of allele effects</span>
 <span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>, times <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">8</span>, ncol <span class="op">=</span> <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="co"># verify that B is what we want:</span>
-<span class="va">B</span></pre></div>
+<span class="va">B</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]   -1   -1   -1
 ## [2,]   -1   -1   -1
@@ -172,70 +162,72 @@
 ## [6,]    1    1    1
 ## [7,]    1    1    1
 ## [8,]    1    1    1</code></pre>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="co"># set.seed to ensure reproducibility</span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># set.seed to ensure reproducibility</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2018</span><span class="op">-</span><span class="fl">01</span><span class="op">-</span><span class="fl">30</span><span class="op">)</span>
 <span class="va">Sigma</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calc_Sigma.html">calc_Sigma</a></span><span class="op">(</span>Vg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html">diag</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, Ve <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html">diag</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>, kinship <span class="op">=</span> <span class="va">kinship</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>
 <span class="co"># call to sim1</span>
 <span class="va">Ypre</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sim1.html">sim1</a></span><span class="op">(</span>X <span class="op">=</span> <span class="va">X</span>, B <span class="op">=</span> <span class="va">B</span>, Sigma <span class="op">=</span> <span class="va">Sigma</span><span class="op">)</span>
 <span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="va">Ypre</span>, nrow <span class="op">=</span> <span class="fl">261</span>, ncol <span class="op">=</span> <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">pp</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"tr1"</span>, <span class="st">"tr2"</span>, <span class="st">"tr3"</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">Y</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"tr1"</span>, <span class="st">"tr2"</span>, <span class="st">"tr3"</span><span class="op">)</span></code></pre></div>
 <p>Let’s perform univariate QTL mapping for each trait (ie, each column) in the Y matrix.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/scan1.html">scan1</a></span><span class="op">(</span>genoprobs <span class="op">=</span> <span class="va">pr</span>, pheno <span class="op">=</span> <span class="va">Y</span>, kinship <span class="op">=</span> <span class="va">kinship</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/scan1.html">scan1</a></span><span class="op">(</span>genoprobs <span class="op">=</span> <span class="va">pr</span>, pheno <span class="op">=</span> <span class="va">Y</span>, kinship <span class="op">=</span> <span class="va">kinship</span><span class="op">)</span></code></pre></div>
 <p>Here is a plot of the results.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span><span class="op">)</span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span>, lod <span class="op">=</span> <span class="fl">2</span>, col <span class="op">=</span><span class="st">"violetred"</span>, add<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span>, lod <span class="op">=</span> <span class="fl">3</span>, col <span class="op">=</span><span class="st">"green"</span>, add<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"topleft"</span>, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span>, lwd <span class="op">=</span> <span class="fl">2</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"darkslateblue"</span>, <span class="st">"violetred"</span>, <span class="st">"green"</span><span class="op">)</span>, bg<span class="op">=</span><span class="st">"gray92"</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"topleft"</span>, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span>, lwd <span class="op">=</span> <span class="fl">2</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"darkslateblue"</span>, <span class="st">"violetred"</span>, <span class="st">"green"</span><span class="op">)</span>, bg<span class="op">=</span><span class="st">"gray92"</span><span class="op">)</span></code></pre></div>
 <p><img src="d-variate-analysis_files/figure-html/1d-lod-plots-1.png" width="700"></p>
-<div class="sourceCode" id="cb15"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/find_peaks.html">find_peaks</a></span><span class="op">(</span><span class="va">s1</span>, map <span class="op">=</span> <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span>, threshold <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/qtl2/man/find_peaks.html">find_peaks</a></span><span class="op">(</span><span class="va">s1</span>, map <span class="op">=</span> <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span>, threshold <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></code></pre></div>
 <pre><code>##   lodindex lodcolumn chr      pos      lod
-## 1        1       tr1   3 81.75897 17.60763
-## 2        2       tr2   3 82.77806 19.82599
-## 3        3       tr3   3 82.77806 20.10788</code></pre>
+## 1        1       tr1   3 82.77806 20.02891
+## 2        2       tr2   3 82.77806 18.26619
+## 3        3       tr3   3 82.77806 22.29926</code></pre>
 </div>
 <div id="perform-three-dimensional-scan-as-first-step-in-pleiotropy-v-separate-qtl-hypothesis-test" class="section level1">
 <h1 class="hasAnchor">
 <a href="#perform-three-dimensional-scan-as-first-step-in-pleiotropy-v-separate-qtl-hypothesis-test" class="anchor"></a>Perform three-dimensional scan as first step in pleiotropy v separate QTL hypothesis test</h1>
 <p>We now have the inputs that we need to do a pleiotropy vs. separate QTL test. We have the founder allele dosages for one chromosome, <em>i.e.</em>, Chr 3, in the R object <code>pp</code>, the matrix of two trait measurements in <code>Y</code>, and a LOCO-derived kinship matrix. We also specify, via the <code>start_snp</code> argument, the starting point for the two-dimensional scan within the array of founder allele dosages. Here, we choose the 38th marker in the array as the starting point. Via the <code>n_snp</code> argument, we specify the number of markers to include in the two-dimensional scan. Here, we input 15, so that we fit the trivariate linear mixed effects model at 15<em>15</em>15 = 3375 ordered triples of markers. In practice, we usually use between 100 and 300 markers for most bivariate scans.</p>
 <p>Lastly, we specify the number of cores to use, with the <code>n_cores</code> argument. We set it to 1 here, to ensure that the vignette can be run by CRAN. However, in practice, you may wish to increase the number of cores to accelerate computing.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit">
-<span class="va">start_index</span> <span class="op">&lt;-</span> <span class="fl">43</span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">start_index</span> <span class="op">&lt;-</span> <span class="fl">43</span>
 <span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/scan_pvl.html">scan_pvl</a></span><span class="op">(</span>probs <span class="op">=</span> <span class="va">pp</span>,
                 pheno <span class="op">=</span> <span class="va">Y</span>,
                 kinship <span class="op">=</span> <span class="va">kinship</span><span class="op">$</span><span class="va">`3`</span>,
                 start_snp <span class="op">=</span> <span class="va">start_index</span>,
                 n_snp <span class="op">=</span> <span class="fl">15</span>, cores <span class="op">=</span> <span class="fu">parallelly</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/parallelly/man/availableCores.html">availableCores</a></span><span class="op">(</span><span class="op">)</span>
-                <span class="op">)</span></pre></div>
+                <span class="op">)</span></code></pre></div>
 <pre><code>## starting covariance matrices estimation with data from 261 subjects.</code></pre>
 <pre><code>## covariance matrices estimation completed.</code></pre>
 <div id="create-a-profile-lod-plot-to-visualize-results-of-three-dimensional-scan" class="section level4">
 <h4 class="hasAnchor">
 <a href="#create-a-profile-lod-plot-to-visualize-results-of-three-dimensional-scan" class="anchor"></a>Create a profile LOD plot to visualize results of three-dimensional scan</h4>
 <p>To visualize results from our two-dimensional scan, we calculate profile LOD for each trait. The code below makes use of the R package <code>ggplot2</code> to plot profile LODs over the scan region.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit">
-<span class="va">out</span></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">out</span></code></pre></div>
 <pre><code>## # A tibble: 3,375 x 4
 ##    Var1               Var2               Var3               log10lik
 ##    &lt;chr&gt;              &lt;chr&gt;              &lt;chr&gt;                 &lt;dbl&gt;
-##  1 backupUNC030474070 backupUNC030474070 backupUNC030474070    -559.
-##  2 backupUNC030474244 backupUNC030474070 backupUNC030474070    -559.
-##  3 UNC030103315       backupUNC030474070 backupUNC030474070    -559.
-##  4 UNC030107226       backupUNC030474070 backupUNC030474070    -559.
-##  5 JAX00527615        backupUNC030474070 backupUNC030474070    -558.
+##  1 backupUNC030474070 backupUNC030474070 backupUNC030474070    -558.
+##  2 backupUNC030474244 backupUNC030474070 backupUNC030474070    -558.
+##  3 UNC030103315       backupUNC030474070 backupUNC030474070    -558.
+##  4 UNC030107226       backupUNC030474070 backupUNC030474070    -557.
+##  5 JAX00527615        backupUNC030474070 backupUNC030474070    -557.
 ##  6 UNC030484421       backupUNC030474070 backupUNC030474070    -557.
-##  7 JAX00109598        backupUNC030474070 backupUNC030474070    -557.
-##  8 backupUNC030619800 backupUNC030474070 backupUNC030474070    -558.
-##  9 UNC030314351       backupUNC030474070 backupUNC030474070    -559.
-## 10 backupUNC030491543 backupUNC030474070 backupUNC030474070    -559.
+##  7 JAX00109598        backupUNC030474070 backupUNC030474070    -556.
+##  8 backupUNC030619800 backupUNC030474070 backupUNC030474070    -556.
+##  9 UNC030314351       backupUNC030474070 backupUNC030474070    -557.
+## 10 backupUNC030491543 backupUNC030474070 backupUNC030474070    -558.
 ## # … with 3,365 more rows</code></pre>
 <p>We see that <code>out</code> is a tibble, as expected. The first three columns contain the marker ids for each ordered triple of markers. The last column contains the log-likelihood values.</p>
-<div class="sourceCode" id="cb22"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></code></pre></div>
+<pre><code>## Warning: replacing previous import 'vctrs::data_frame' by 'tibble::data_frame'
+## when loading 'dplyr'</code></pre>
 <pre><code>## 
 ## Attaching package: 'dplyr'</code></pre>
 <pre><code>## The following objects are masked from 'package:stats':
@@ -244,24 +236,24 @@
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb26"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
 <span class="va">out_lods</span> <span class="op">&lt;-</span> <span class="va">out</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="../reference/calc_profile_lods.html">calc_profile_lods</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="../reference/add_pmap.html">add_pmap</a></span><span class="op">(</span>pmap <span class="op">=</span> <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span><span class="op">)</span></pre></div>
+  <span class="fu"><a href="../reference/add_pmap.html">add_pmap</a></span><span class="op">(</span>pmap <span class="op">=</span> <span class="va">DOex</span><span class="op">$</span><span class="va">pmap</span><span class="op">$</span><span class="va">`3`</span><span class="op">)</span></code></pre></div>
 <pre><code>## Joining, by = "marker"</code></pre>
-<div class="sourceCode" id="cb28"><pre class="downlit">
-<span class="va">out_lods</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">marker_position</span>, y <span class="op">=</span> <span class="va">profile_lod</span>, colour <span class="op">=</span> <span class="va">trait</span><span class="op">)</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">out_lods</span> <span class="op">%&gt;%</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">marker_position</span>, y <span class="op">=</span> <span class="va">profile_lod</span>, colour <span class="op">=</span> <span class="va">trait</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="d-variate-analysis_files/figure-html/profile-plot-1.png" width="700"></p>
 </div>
 <div id="calculate-the-likelihood-ratio-test-statistic-for-pleiotropy-v-separate-qtl" class="section level4">
 <h4 class="hasAnchor">
 <a href="#calculate-the-likelihood-ratio-test-statistic-for-pleiotropy-v-separate-qtl" class="anchor"></a>Calculate the likelihood ratio test statistic for pleiotropy v separate QTL</h4>
 <p>We use the function <code>calc_lrt_tib</code> to calculate the likelihood ratio test statistic value for the specified traits and specified genomic region.</p>
-<div class="sourceCode" id="cb29"><pre class="downlit">
-<span class="op">(</span><span class="va">lrt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">out_lods</span><span class="op">$</span><span class="va">profile_lod</span><span class="op">)</span><span class="op">)</span></pre></div>
-<pre><code>## [1] 1.012118</code></pre>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="op">(</span><span class="va">lrt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">out_lods</span><span class="op">$</span><span class="va">profile_lod</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
 </div>
 <div id="bootstrap-analysis-to-get-p-values" class="section level3">
 <h3 class="hasAnchor">
@@ -271,12 +263,12 @@
 <p>We use a parametric bootstrap strategy in which we first use the studied phenotypes to infer the values of model parameters. Once we have the inferred values of the model parameters, we simulate phenotypes from the pleiotropy model (with the inferred parameter values).</p>
 <p>A natural question that arises is “which marker’s allele probabilities do we use when simulating phenotypes?” We use the marker that, under the null hypothesis, <em>i.e.</em>, under the pleiotropy constraint, yields the greatest value of the log-likelihood.</p>
 <p>Before we call <code>boot_pvl</code>, we need to identify the index (on the chromosome under study) of the marker that maximizes the likelihood under the pleiotropy constraint. To do this, we use the <code>qtl2pleio</code> function <code>find_pleio_peak_tib</code>.</p>
-<div class="sourceCode" id="cb31"><pre class="downlit">
-<span class="op">(</span><span class="va">pleio_index</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/find_pleio_peak_tib.html">find_pleio_peak_tib</a></span><span class="op">(</span><span class="va">out</span>, start_snp <span class="op">=</span> <span class="va">start_index</span><span class="op">)</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="op">(</span><span class="va">pleio_index</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/find_pleio_peak_tib.html">find_pleio_peak_tib</a></span><span class="op">(</span><span class="va">out</span>, start_snp <span class="op">=</span> <span class="va">start_index</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## log10lik8 
 ##        50</code></pre>
-<div class="sourceCode" id="cb33"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2018</span> <span class="op">-</span> <span class="fl">11</span> <span class="op">-</span> <span class="fl">25</span><span class="op">)</span>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2018</span> <span class="op">-</span> <span class="fl">11</span> <span class="op">-</span> <span class="fl">25</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressMessages</a></span><span class="op">(</span><span class="va">b_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/boot_pvl.html">boot_pvl</a></span><span class="op">(</span>probs <span class="op">=</span> <span class="va">pp</span>,
                                    pheno <span class="op">=</span> <span class="va">Y</span>,
                                    pleio_peak_index <span class="op">=</span> <span class="va">pleio_index</span>,
@@ -285,23 +277,24 @@
                                    start_snp <span class="op">=</span> <span class="va">start_index</span>,
                                    n_snp <span class="op">=</span> <span class="fl">15</span>, cores <span class="op">=</span> <span class="fu">parallelly</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/parallelly/man/availableCores.html">availableCores</a></span><span class="op">(</span><span class="op">)</span>
                                    <span class="op">)</span>
-                 <span class="op">)</span></pre></div>
+                 <span class="op">)</span></code></pre></div>
 <p>The argument <code>nboot</code> indicates the number of bootstrap samples that will be created and analyzed. Here, we set <code>nboot = 2</code>, so we expect to see returned a numeric vector of length 2, where each entry is a LRT statistic value from a distinct bootstrap sample.</p>
 <p>Finally, we determine a bootstrap p-value in the usual method. We treat the bootstrap samples’ test statistics as an empirical distribution of the test statistic under the null hypothesis of pleiotropy. Thus, to get a p-value, we want to ask “What is the probability, under the null hypothesis, of observing a test statistic value that is at least as extreme as that which we observed?”</p>
-<div class="sourceCode" id="cb34"><pre class="downlit">
-<span class="va">b_out</span></pre></div>
-<pre><code>## [1] 0.0000000 0.2445236</code></pre>
-<div class="sourceCode" id="cb36"><pre class="downlit">
-<span class="op">(</span><span class="va">pvalue</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">b_out</span> <span class="op">&gt;=</span> <span class="va">lrt</span><span class="op">)</span><span class="op">)</span></pre></div>
-<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">b_out</span></code></pre></div>
+<pre><code>## [1] 0 0</code></pre>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="op">(</span><span class="va">pvalue</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">b_out</span> <span class="op">&gt;=</span> <span class="va">lrt</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
 <p>In practice, one would want to use many more bootstrap samples to achieve an empirical distribution that is closer to the theoretical distribution of the test statistic under the null hypothesis.</p>
 <p>However, if one wants to perform analyses with a reasonable number - say 400 - bootstrap samples, this will take a very long time - many days - on a single laptop computer. We have used a series of computer clusters that are coordinated by the University of Wisconsin-Madison’s Center for High-throughput Computing (<a href="http://chtc.cs.wisc.edu" class="uri">http://chtc.cs.wisc.edu</a>). We typically are able to analyze 1000 bootstrap samples - for a bivariate analysis - in less than 24 hours with this service.</p>
 </div>
 <div id="session-info" class="section level2">
 <h2 class="hasAnchor">
 <a href="#session-info" class="anchor"></a>Session info</h2>
-<div class="sourceCode" id="cb38"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<pre><code>## Error in get(genname, envir = envir) : object 'testthat_print' not found</code></pre>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value                       
 ##  version  R version 4.0.3 (2020-10-10)
@@ -312,84 +305,85 @@
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2020-10-29                  
+##  date     2021-02-05                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
-##  package     * version    date       lib source                       
-##  assertthat    0.2.1      2019-03-21 [2] CRAN (R 4.0.0)               
-##  backports     1.1.10     2020-09-15 [2] CRAN (R 4.0.2)               
-##  bit           4.0.4      2020-08-04 [2] CRAN (R 4.0.2)               
-##  bit64         4.0.5      2020-08-30 [2] CRAN (R 4.0.2)               
-##  blob          1.2.1      2020-01-20 [2] CRAN (R 4.0.0)               
-##  callr         3.5.1      2020-10-13 [2] CRAN (R 4.0.3)               
-##  cli           2.1.0      2020-10-12 [2] CRAN (R 4.0.3)               
-##  colorspace    1.4-1      2019-03-18 [2] CRAN (R 4.0.0)               
-##  crayon        1.3.4.9000 2020-10-22 [2] Github (r-lib/crayon@6b3f0c6)
-##  data.table    1.13.2     2020-10-19 [2] CRAN (R 4.0.3)               
-##  DBI           1.1.0      2019-12-15 [2] CRAN (R 4.0.0)               
-##  desc          1.2.0      2018-05-01 [2] CRAN (R 4.0.0)               
-##  devtools      2.3.2      2020-09-18 [2] CRAN (R 4.0.3)               
-##  digest        0.6.26     2020-10-17 [2] CRAN (R 4.0.3)               
-##  dplyr       * 1.0.2      2020-08-18 [2] CRAN (R 4.0.2)               
-##  ellipsis      0.3.1      2020-05-15 [2] CRAN (R 4.0.0)               
-##  evaluate      0.14       2019-05-28 [2] CRAN (R 4.0.0)               
-##  fansi         0.4.1      2020-01-08 [2] CRAN (R 4.0.0)               
-##  farver        2.0.3      2020-01-16 [2] CRAN (R 4.0.0)               
-##  fs            1.5.0      2020-07-31 [2] CRAN (R 4.0.3)               
-##  gemma2        0.1.3      2020-10-24 [2] CRAN (R 4.0.3)               
-##  generics      0.0.2      2018-11-29 [2] CRAN (R 4.0.0)               
-##  ggplot2     * 3.3.2      2020-06-19 [2] CRAN (R 4.0.0)               
-##  glue          1.4.2      2020-08-27 [2] CRAN (R 4.0.2)               
-##  gtable        0.3.0      2019-03-25 [2] CRAN (R 4.0.0)               
-##  htmltools     0.5.0      2020-06-16 [2] CRAN (R 4.0.0)               
-##  jsonlite      1.7.1      2020-09-07 [2] CRAN (R 4.0.2)               
-##  knitr         1.30       2020-09-22 [2] CRAN (R 4.0.3)               
-##  labeling      0.4.2      2020-10-20 [2] CRAN (R 4.0.3)               
-##  lattice       0.20-41    2020-04-02 [2] CRAN (R 4.0.0)               
-##  lifecycle     0.2.0      2020-03-06 [2] CRAN (R 4.0.0)               
-##  magrittr      1.5        2014-11-22 [2] CRAN (R 4.0.0)               
-##  MASS          7.3-53     2020-09-09 [2] CRAN (R 4.0.3)               
-##  Matrix        1.2-18     2019-11-27 [2] CRAN (R 4.0.3)               
-##  memoise       1.1.0      2017-04-21 [2] CRAN (R 4.0.0)               
-##  munsell       0.5.0      2018-06-12 [2] CRAN (R 4.0.0)               
-##  parallelly    1.20.0     2020-10-20 [2] CRAN (R 4.0.3)               
-##  pillar        1.4.6      2020-07-10 [2] CRAN (R 4.0.2)               
-##  pkgbuild      1.1.0      2020-07-13 [2] CRAN (R 4.0.2)               
-##  pkgconfig     2.0.3      2019-09-22 [2] CRAN (R 4.0.0)               
-##  pkgdown       1.6.1      2020-09-12 [2] CRAN (R 4.0.3)               
-##  pkgload       1.1.0      2020-05-29 [2] CRAN (R 4.0.0)               
-##  prettyunits   1.1.1      2020-01-24 [2] CRAN (R 4.0.0)               
-##  processx      3.4.4      2020-09-03 [2] CRAN (R 4.0.3)               
-##  ps            1.4.0      2020-10-07 [2] CRAN (R 4.0.3)               
-##  purrr         0.3.4      2020-04-17 [2] CRAN (R 4.0.0)               
-##  qtl2        * 0.22-11    2020-07-10 [2] CRAN (R 4.0.2)               
-##  qtl2pleio   * 1.4.1      2020-10-30 [1] local                        
-##  R6            2.4.1      2019-11-12 [2] CRAN (R 4.0.0)               
-##  ragg          0.4.0      2020-10-05 [2] CRAN (R 4.0.3)               
-##  Rcpp          1.0.5      2020-07-06 [2] CRAN (R 4.0.2)               
-##  remotes       2.2.0      2020-07-21 [2] CRAN (R 4.0.3)               
-##  rlang         0.4.8      2020-10-08 [2] CRAN (R 4.0.3)               
-##  rmarkdown     2.5        2020-10-21 [2] CRAN (R 4.0.3)               
-##  rprojroot     1.3-2      2018-01-03 [2] CRAN (R 4.0.0)               
-##  RSQLite       2.2.1      2020-09-30 [2] CRAN (R 4.0.3)               
-##  rstudioapi    0.11       2020-02-07 [2] CRAN (R 4.0.0)               
-##  scales        1.1.1      2020-05-11 [2] CRAN (R 4.0.0)               
-##  sessioninfo   1.1.1      2018-11-05 [2] CRAN (R 4.0.0)               
-##  stringi       1.5.3      2020-09-09 [2] CRAN (R 4.0.2)               
-##  stringr       1.4.0      2019-02-10 [2] CRAN (R 4.0.0)               
-##  systemfonts   0.3.2      2020-09-29 [2] CRAN (R 4.0.3)               
-##  testthat      2.3.2      2020-03-02 [2] CRAN (R 4.0.0)               
-##  textshaping   0.1.2      2020-10-08 [2] CRAN (R 4.0.3)               
-##  tibble        3.0.4      2020-10-12 [2] CRAN (R 4.0.3)               
-##  tidyselect    1.1.0      2020-05-11 [2] CRAN (R 4.0.0)               
-##  usethis       1.6.3      2020-09-17 [2] CRAN (R 4.0.3)               
-##  utf8          1.1.4      2018-05-24 [2] CRAN (R 4.0.0)               
-##  vctrs         0.3.4      2020-08-29 [2] CRAN (R 4.0.2)               
-##  withr         2.3.0      2020-09-22 [2] CRAN (R 4.0.3)               
-##  xfun          0.18       2020-09-29 [2] CRAN (R 4.0.3)               
-##  yaml          2.2.1      2020-02-01 [2] CRAN (R 4.0.0)               
+##  package     * version    date       lib source                        
+##  assertthat    0.2.1      2019-03-21 [2] CRAN (R 4.0.1)                
+##  bit           1.1-15.2   2020-02-10 [2] CRAN (R 4.0.1)                
+##  bit64         0.9-7.1    2020-07-15 [2] CRAN (R 4.0.2)                
+##  blob          1.2.1      2020-01-20 [2] CRAN (R 4.0.1)                
+##  cachem        1.0.3      2021-02-04 [2] CRAN (R 4.0.3)                
+##  callr         3.5.1      2020-10-13 [2] CRAN (R 4.0.3)                
+##  cli           2.3.0      2021-01-31 [2] CRAN (R 4.0.3)                
+##  colorspace    1.4-1      2019-03-18 [2] CRAN (R 4.0.1)                
+##  crayon        1.4.0      2021-01-30 [2] CRAN (R 4.0.3)                
+##  data.table    1.12.8     2019-12-09 [2] CRAN (R 4.0.1)                
+##  DBI           1.1.0      2019-12-15 [2] CRAN (R 4.0.1)                
+##  desc          1.2.0      2018-05-01 [2] CRAN (R 4.0.1)                
+##  devtools      2.3.0      2020-04-10 [2] CRAN (R 4.0.1)                
+##  digest        0.6.27     2020-10-24 [2] CRAN (R 4.0.3)                
+##  dplyr       * 1.0.0      2020-05-29 [2] CRAN (R 4.0.1)                
+##  ellipsis      0.3.1      2020-05-15 [2] CRAN (R 4.0.1)                
+##  evaluate      0.14       2019-05-28 [2] CRAN (R 4.0.1)                
+##  fansi         0.4.2      2021-01-15 [2] CRAN (R 4.0.3)                
+##  farver        2.0.3      2020-01-16 [2] CRAN (R 4.0.1)                
+##  fastmap       1.1.0      2021-01-25 [2] CRAN (R 4.0.3)                
+##  fs            1.5.0      2020-07-31 [2] CRAN (R 4.0.3)                
+##  gemma2        0.1.1      2019-10-01 [2] CRAN (R 4.0.2)                
+##  generics      0.0.2      2018-11-29 [2] CRAN (R 4.0.1)                
+##  ggplot2     * 3.3.2      2020-06-19 [2] CRAN (R 4.0.1)                
+##  glue          1.4.2      2020-08-27 [2] CRAN (R 4.0.3)                
+##  gtable        0.3.0      2019-03-25 [2] CRAN (R 4.0.1)                
+##  highr         0.8        2019-03-20 [2] CRAN (R 4.0.1)                
+##  htmltools     0.5.1.1    2021-01-22 [2] CRAN (R 4.0.3)                
+##  jsonlite      1.7.2      2020-12-09 [2] CRAN (R 4.0.3)                
+##  knitr         1.31       2021-01-27 [2] CRAN (R 4.0.3)                
+##  labeling      0.3        2014-08-23 [2] CRAN (R 4.0.1)                
+##  lattice       0.20-41    2020-04-02 [5] CRAN (R 4.0.0)                
+##  lifecycle     0.2.0      2020-03-06 [2] CRAN (R 4.0.1)                
+##  magrittr      2.0.1      2020-11-17 [2] CRAN (R 4.0.3)                
+##  MASS          7.3-53     2020-09-09 [5] CRAN (R 4.0.2)                
+##  Matrix        1.2-18     2019-11-27 [5] CRAN (R 4.0.0)                
+##  memoise       2.0.0      2021-01-26 [2] CRAN (R 4.0.3)                
+##  munsell       0.5.0      2018-06-12 [2] CRAN (R 4.0.1)                
+##  parallelly    1.23.0     2021-01-04 [2] CRAN (R 4.0.3)                
+##  pillar        1.4.7      2020-11-20 [2] CRAN (R 4.0.3)                
+##  pkgbuild      1.0.8      2020-05-07 [2] CRAN (R 4.0.1)                
+##  pkgconfig     2.0.3      2019-09-22 [2] CRAN (R 4.0.1)                
+##  pkgdown       1.6.1.9000 2021-02-05 [2] Github (r-lib/pkgdown@c931fe2)
+##  pkgload       1.1.0      2020-05-29 [2] CRAN (R 4.0.1)                
+##  prettyunits   1.1.1      2020-01-24 [2] CRAN (R 4.0.1)                
+##  processx      3.4.5      2020-11-30 [2] CRAN (R 4.0.3)                
+##  ps            1.5.0      2020-12-05 [2] CRAN (R 4.0.3)                
+##  purrr         0.3.4      2020-04-17 [2] CRAN (R 4.0.1)                
+##  qtl2        * 0.22       2020-06-19 [2] local                         
+##  qtl2pleio   * 1.4.3.9000 2021-02-06 [1] local                         
+##  R6            2.5.0      2020-10-28 [2] CRAN (R 4.0.3)                
+##  ragg          0.4.1      2021-01-11 [2] CRAN (R 4.0.3)                
+##  Rcpp          1.0.5      2020-07-06 [2] CRAN (R 4.0.2)                
+##  remotes       2.1.1      2020-02-15 [2] CRAN (R 4.0.1)                
+##  rlang         0.4.10     2020-12-30 [2] CRAN (R 4.0.3)                
+##  rmarkdown     2.6        2020-12-14 [2] CRAN (R 4.0.3)                
+##  rprojroot     2.0.2      2020-11-15 [2] CRAN (R 4.0.3)                
+##  RSQLite       2.2.0      2020-01-07 [2] CRAN (R 4.0.1)                
+##  scales        1.1.1      2020-05-11 [2] CRAN (R 4.0.1)                
+##  sessioninfo   1.1.1      2018-11-05 [2] CRAN (R 4.0.1)                
+##  stringi       1.5.3      2020-09-09 [2] CRAN (R 4.0.3)                
+##  stringr       1.4.0      2019-02-10 [2] CRAN (R 4.0.1)                
+##  systemfonts   1.0.0      2021-02-01 [2] CRAN (R 4.0.3)                
+##  testthat      2.3.2      2020-03-02 [2] CRAN (R 4.0.1)                
+##  textshaping   0.2.1      2020-11-13 [2] CRAN (R 4.0.3)                
+##  tibble        3.0.6      2021-01-29 [2] CRAN (R 4.0.3)                
+##  tidyselect    1.1.0      2020-05-11 [2] CRAN (R 4.0.1)                
+##  usethis       1.6.1      2020-04-29 [2] CRAN (R 4.0.1)                
+##  utf8          1.1.4      2018-05-24 [2] CRAN (R 4.0.1)                
+##  vctrs         0.3.6      2020-12-17 [2] CRAN (R 4.0.3)                
+##  withr         2.4.1      2021-01-26 [2] CRAN (R 4.0.3)                
+##  xfun          0.20       2021-01-06 [2] CRAN (R 4.0.3)                
+##  yaml          2.2.1      2020-02-01 [2] CRAN (R 4.0.1)                
 ## 
-## [1] /tmp/RtmpmdkoyT/temp_libpath117765635eab9
+## [1] /tmp/RtmpIdsHR7/temp_libpath34c447b516bd7
 ## [2] /home/fred/R/x86_64-pc-linux-gnu-library/4.0
 ## [3] /usr/local/lib/R/site-library
 ## [4] /usr/lib/R/site-library
@@ -413,7 +407,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
