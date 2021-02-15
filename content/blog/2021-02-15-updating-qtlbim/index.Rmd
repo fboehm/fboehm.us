@@ -1,0 +1,73 @@
+---
+title: Updating `qtlbim`
+author: Frederick Boehm
+date: '2021-02-15'
+slug: updating-qtlbim
+categories:
+  - computing
+  - research
+tags:
+  - R
+  - R package
+  - genetics
+  - qtl
+  - qtlbim
+  - bayesian
+params:
+  lastmod: !r clock::zoned_now("America/New_York")  
+---
+
+
+I'm excited to announce that I've updated the R package `qtlbim`. I forked the code from the [CRAN Github repo for qtlbim](https://github.com/cran/qtlbim). Here is the [updated qtlbim repository](https://github.com/fboehm/qtlbim) in my Github account. It now works smoothly with gcc10, thanks to patches from Dirk Eddelbuettel. 
+
+## Installation 
+
+To install `qtlbim` from my Github repository, type this code:
+
+```{r, eval = FALSE}
+remotes::install_github("fboehm/qtlbim")
+```
+
+## Getting started with Bayesian QTL mapping
+
+Once you've installed `qtlbim`, browse the vignettes to find example analyses. 
+
+
+
+
+
+## Why `qtlbim` is cool
+
+`qtlbim` uses a Bayesian framework to model genetic architectures of complex traits in 
+two-parent crosses. It allows traits to have multiple quantitative trait loci (QTL) across the genome. 
+
+`qtlbim` uses a Markov chain Monte Carlo (MCMC) strategy to obtain samples from the 
+posterior distribution. It then summarizes those samples for inference purposes.
+
+MCMC sampling code is written in C, so it's lightning fast. The algorithms are also efficiently written, as discussed in the journal articles from Yi, et al. and Yandell, et al. 
+
+
+
+
+
+## History
+
+The amazing Brian Yandell and Nengjun Yi and collaborators developed `qtlbim` starting in the mid 2000s. It was on CRAN as recently as 2013. 
+
+## Plans
+
+I will continue to add documentation to the package. Vignettes may be updated. They are currently written as Rnw files. Because the package development preceded widespread use of `Roxygen2`, `devtools`, and `rmarkdown` R packages,
+it may be some work to modernize the documentation. 
+
+Unit tests and continuous integration will also be added. Following more substantive updates, I'll incorporate a `qtlbim` webpage into my site.
+
+
+I welcome feature requests via [my Github repository](https://github.com/fboehm/qtlbim). 
+
+
+(Last modified: `r params$lastmod`)
+
+
+
+
+
