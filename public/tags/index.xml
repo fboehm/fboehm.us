@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on fboehm.us</title>
+    <link>https://fboehm.us/tags/</link>
+    <description>Recent content in Tags on fboehm.us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
+    <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fboehm.us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>academics</title>
+      <link>https://fboehm.us/tags/academics/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/academics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>genetics</title>
+      <link>https://fboehm.us/tags/genetics/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/genetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://fboehm.us/tags/r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R package</title>
+      <link>https://fboehm.us/tags/r-package/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/r-package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>improv comedy</title>
+      <link>https://fboehm.us/tags/improv-comedy/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/improv-comedy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pkgdown</title>
+      <link>https://fboehm.us/tags/pkgdown/</link>
+      <pubDate>Sat, 24 Nov 2018 10:01:53 -0600</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/tags/pkgdown/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

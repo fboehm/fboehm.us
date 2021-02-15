@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fboehm.us</title>
+    <link>https://fboehm.us/vitae/</link>
+    <description>Recent content on fboehm.us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
+    <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster><atom:link href="https://fboehm.us/vitae/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

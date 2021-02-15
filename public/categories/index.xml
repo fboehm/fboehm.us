@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fboehm.us: Categories posts  </title>
+    <link>https://fboehm.us/categories/</link>
+    <description>Frederick Boehm&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>frederick.boehm@gmail.com (Frederick J. Boehm)</managingEditor>
+    <webMaster>frederick.boehm@gmail.com (Frederick J. Boehm)</webMaster>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://fboehm.us/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>research</title>
+      <link>https://fboehm.us/categories/research/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/categories/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computing</title>
+      <link>https://fboehm.us/categories/computing/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/categories/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>entertainment</title>
+      <link>https://fboehm.us/categories/entertainment/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>frederick.boehm@gmail.com (Frederick J. Boehm)</author>
+      <guid>https://fboehm.us/categories/entertainment/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
