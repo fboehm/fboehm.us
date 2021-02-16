@@ -1,6 +1,6 @@
 ---
 title: Updating `qtlbim`
-author: Frederick Boehm
+author: Frederick J. Boehm
 date: '2021-02-15'
 slug: updating-qtlbim
 categories:
