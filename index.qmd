@@ -1,0 +1,39 @@
+---
+title: "Fred Boehm"
+subtitle: "Assistant Professor of Statistics"
+about:
+  template: trestles
+  image: images/Boehm_Fred_2025_WEB.jpg
+  image-shape: round
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/fboehm
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/fred-boehm-27992a37a/
+    - icon: mortarboard
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=k7PBnv4AAAAJ&hl=en
+    - icon: person-badge
+      text: ORCID
+      href: https://orcid.org/0000-0002-1644-5931
+    - icon: envelope
+      text: Email
+      href: mailto:frederick.boehm@sdstate.edu
+---
+
+## Welcome
+
+I am an Assistant Professor of Statistics at South Dakota State University. I develop statistical methods for human genetics data, with an emphasis in genome-wide association studies and rare variant association studies. The high dimensionality of genetics data provides many statistical and computing challenges. I try to leverage Bayesian statistical methods, for example, to compute genetic risk predictors for chronic diseases. I enjoy collaborative data science research projects, and I'm always looking for new opportunities.
+
+
+
+## Interests
+
+- Statistical genetics and genomics
+- High-dimensional data analysis
+- Bayesian methods
+- Collaborative data science
+- Pedagogy research in statistics, data science, and mathematics
+

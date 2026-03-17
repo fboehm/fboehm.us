@@ -1,0 +1,5 @@
+/.quarto/
+/_site/
+/.snakemake/
+
+**/*.quarto_ipynb

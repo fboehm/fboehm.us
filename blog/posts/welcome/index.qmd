@@ -1,0 +1,18 @@
+---
+title: "Welcome to My Blog"
+description: "An introduction to what I'll be writing about here."
+date: 2026-03-17
+categories: [general]
+---
+
+Welcome to my blog! I plan to write here about statistics, research, teaching, comedy, and anything that captures my attention.
+
+Topics I expect to cover:
+
+- Statistical methods in genetics and genomics
+- Causal inference in observational studies
+- Teaching statistics and mathematics
+- R packages and reproducible research workflows
+- Notes from conferences and seminars
+
+Stay tuned.

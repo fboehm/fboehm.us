@@ -1,0 +1,58 @@
+---
+title: "Research"
+toc: true
+---
+
+## Overview
+
+My research lies at the intersection of statistics and biology, with a focus on developing and applying statistical methods for complex, high-dimensional data. I also have active interests in statistics and mathematics education research.
+
+---
+
+## Human Genetics and Statistics
+
+Description of your work in human genetics and statistics. What methods do you develop or apply? What questions motivate this line of research?
+
+### Selected Publications
+
+1. **Boehm, F.**, Author, B., & Author, C. (2025). Title of paper. *Journal Name*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)
+
+---
+
+## Observational Studies and Causal Inference
+
+Description of your work on observational studies and causal inference. What problems do you address? What methods or frameworks do you use?
+
+### Selected Publications
+
+1. **Boehm, F.** & Author, B. (2024). Title of paper. *Journal Name*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)
+
+---
+
+## Statistics and Mathematics Education Research
+
+Description of your education research interests. What aspects of teaching and learning in statistics or mathematics do you study?
+
+### Selected Publications
+
+1. **Boehm, F.** (2024). Title of paper. *Journal of Statistics Education*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)
+
+---
+
+## Mouse Genetics and Statistics
+
+Description of your work in mouse genetics. What biological or statistical questions drive this research? Do you develop software or pipelines?
+
+### Selected Publications
+
+1. **Boehm, F.**, Author, B., & Author, C. (2023). Title of paper. *Genetics*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)
+
+---
+
+## Other Collaborations
+
+Description of other collaborative projects you are involved in across disciplines.
+
+### Selected Publications
+
+1. Author, A., **Boehm, F.**, & Author, C. (2024). Title of paper. *Journal Name*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)

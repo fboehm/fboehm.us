@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "Fred Boehm"
+  description: "Assistant Professor of Statistics"
+  site-url: "https://fboehm.us"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: blog/index.qmd
+        text: Blog
+      - href: cv.qmd
+        text: CV
+      - href: contact.qmd
+        text: Contact
+    right:
+      - icon: github
+        href: https://github.com/fboehm
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/fred-boehm-27992a37a/
+        aria-label: LinkedIn
+  page-footer:
+    left: "© 2026 Fred Boehm · Assistant Professor of Statistics"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    link-external-newwindow: true
