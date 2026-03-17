@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Fred Boehm</title>
+<link>https://fboehm.us/blog/</link>
+<atom:link href="https://fboehm.us/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Assistant Professor of Statistics</description>
+<generator>quarto-1.8.26</generator>
+<lastBuildDate>Tue, 17 Mar 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Welcome to My Blog</title>
+  <link>https://fboehm.us/blog/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Welcome to my blog! I plan to write here about statistics, research, teaching, comedy, and anything that captures my attention.</p>
+<p>Topics I expect to cover:</p>
+<ul>
+<li>Statistical methods in genetics and genomics</li>
+<li>Causal inference in observational studies</li>
+<li>Teaching statistics and mathematics</li>
+<li>R packages and reproducible research workflows</li>
+<li>Notes from conferences and seminars</li>
+</ul>
+<p>Stay tuned.</p>
+
+
+
+ ]]></description>
+  <category>general</category>
+  <guid>https://fboehm.us/blog/posts/welcome/</guid>
+  <pubDate>Tue, 17 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
