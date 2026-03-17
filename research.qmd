@@ -5,7 +5,9 @@ toc: true
 
 ## Overview
 
-My research lies at the intersection of statistics and biology, with a focus on developing and applying statistical methods for complex, high-dimensional data. I also have active interests in statistics and mathematics education research.
+I study statistical methods and apply them to biomedical research questions. 
+
+
 
 ---
 
