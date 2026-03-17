@@ -5,6 +5,7 @@ website:
   title: "Fred Boehm"
   description: "Assistant Professor of Statistics"
   site-url: "https://fboehm.us"
+  google-analytics: "G-G6GDCM3M5N"
   navbar:
     left:
       - href: index.qmd
