@@ -3,5 +3,5 @@
   publish = "_site"
 
 [build.environment]
-  QUARTO_VERSION = "1.6.26"
+  QUARTO_VERSION = "1.8.26"
   NODE_VERSION = "24"
