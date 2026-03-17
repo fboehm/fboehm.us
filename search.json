@@ -49,27 +49,6 @@
     "text": "Other Collaborations\nDescription of other collaborative projects you are involved in across disciplines.\n\nSelected Publications\n\nAuthor, A., Boehm, F., & Author, C. (2024). Title of paper. Journal Name, vol(issue), pages. doi:10.xxxx/xxxxx"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Download CV (PDF)\n\n  &lt;p&gt;Your browser does not support embedded PDFs.\n     &lt;a href=\"https://raw.githubusercontent.com/fboehm/cv/master/cv.pdf\" target=\"_blank\"&gt;Download the CV here.&lt;/a&gt;\n  &lt;/p&gt;"
-  },
-  {
-    "objectID": "blog/posts/welcome/index.html",
-    "href": "blog/posts/welcome/index.html",
-    "title": "Welcome to My Blog",
-    "section": "",
-    "text": "Welcome to my blog! I plan to write here about statistics, research, teaching, comedy, and anything that captures my attention.\nTopics I expect to cover:\n\nStatistical methods in genetics and genomics\nCausal inference in observational studies\nTeaching statistics and mathematics\nR packages and reproducible research workflows\nNotes from conferences and seminars\n\nStay tuned."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Subscribe via RSS\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\ngeneral\n\n\n\nAn introduction to what I’ll be writing about here.\n\n\n\n\n\nMar 17, 2026\n\n1 min\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
@@ -91,6 +70,13 @@
     "text": "Find Me Online\n\nGitHub\nLinkedIn\nGoogle Scholar\nORCID"
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Subscribe via RSS\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\ngeneral\n\n\n\nAn introduction to what I’ll be writing about here.\n\n\n\n\n\nMar 17, 2026\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Fred Boehm",
@@ -110,5 +96,19 @@
     "title": "Fred Boehm",
     "section": "Interests",
     "text": "Interests\n\nStatistical genetics and genomics\nHigh-dimensional data analysis\nBayesian methods\nCollaborative data science\nPedagogy research in statistics, data science, and mathematics"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "Welcome to my blog! I plan to write here about statistics, research, teaching, comedy, and anything that captures my attention.\nTopics I expect to cover:\n\nStatistical methods in genetics and genomics\nCausal inference in observational studies\nTeaching statistics and mathematics\nR packages and reproducible research workflows\nNotes from conferences and seminars\n\nStay tuned."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download CV (PDF)\n\n  &lt;p&gt;Your browser does not support embedded PDFs.\n     &lt;a href=\"https://raw.githubusercontent.com/fboehm/cv/master/cv.pdf\" target=\"_blank\"&gt;Download the CV here.&lt;/a&gt;\n  &lt;/p&gt;"
   }
 ]
