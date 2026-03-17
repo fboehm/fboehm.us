@@ -15,6 +15,10 @@ I study statistical methods and apply them to biomedical research questions.
 
 Description of your work in human genetics and statistics. What methods do you develop or apply? What questions motivate this line of research?
 
+
+
+
+
 ### Selected Publications
 
 1. **Boehm, F.**, Author, B., & Author, C. (2025). Title of paper. *Journal Name*, *vol*(issue), pages. [doi:10.xxxx/xxxxx](https://doi.org)
